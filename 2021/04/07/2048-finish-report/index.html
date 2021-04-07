@@ -1,0 +1,1964 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="2048_Finish_report, Qianyu Zhang">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>2048_Finish_report | Qianyu Zhang</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Qianyu Zhang</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Qianyu Zhang</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/QianyuZhang118" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Follow Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0087ff;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/QianyuZhang118" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Follow Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">2048_Finish_report</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/2048/">
+                                <span class="chip bg-color">2048</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/MFC/" class="post-category">
+                                MFC
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-07
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.4k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="2048游戏及管理平台"><a href="#2048游戏及管理平台" class="headerlink" title="2048游戏及管理平台"></a>2048游戏及管理平台</h1><h2 id="一、项目内容"><a href="#一、项目内容" class="headerlink" title="一、项目内容"></a>一、项目内容</h2><h3 id="1-需求分析"><a href="#1-需求分析" class="headerlink" title="1.需求分析"></a>1.需求分析</h3><h4 id="1-1-设计目标"><a href="#1-1-设计目标" class="headerlink" title="1.1 设计目标"></a>1.1 设计目标</h4><h5 id="1、基本要求："><a href="#1、基本要求：" class="headerlink" title="1、基本要求："></a>1、基本要求：</h5><p>（1）布设游戏的场景；<br>（2）管理游戏的玩家,包括记录并显示玩家的用户名、实时排名以及得分，游戏过程中的记录信息包括玩家操作等；<br>（3）按规则执行游戏过程，判定游戏胜利；<br>（4）记录游戏过程包括玩家操作以及每一步操作的结果，并可以通过图形界面演示重现；<br>（5）游戏规则：每次可以选择上下左右其中一个方向去滑动，每滑动一次，所有的数字方块都会往滑动的方向靠拢外，系统也会在空白的地方乱数出现一个数字方块，相同数字的方块在靠拢、相撞时会相加。系统给予的数字方块不是2就是4，玩家要想办法在这小小的16格范围中凑出“2048”这个数字方块；<br>（6）矩阵的四周有四个按钮，分别表示向左、向右、向上、向下移动。当某一方向无法移动时，该按钮应该被隐藏（变灰）。</p>
+<h5 id="2、发挥部分："><a href="#2、发挥部分：" class="headerlink" title="2、发挥部分："></a>2、发挥部分：</h5><p>（1）限定游戏时间：在游戏界面添加倒计时，并设计倒计时程序。当计时到时游戏结束并重置界面；<br>（2）添加背景音乐；<br>（3）增加滚动字幕，字幕内容为一些名人名言，提升游戏过程中的趣味性；<br>（4）在演示玩家操作时，用户可选择演示播放速度，以满足用户不同需求；<br>（5）实现数据可迁移，方便用户在不同PC设备上使用；<br>（6）添加用户登录界面，方便对玩家的管理；<br>（7）在游戏界面添加时间日期显示，显示当前的日期和时间；<br>（8）添加键盘控制功能，玩家可以通过键盘控制界面上下左右操作。</p>
+<h4 id="1-2-功能需求"><a href="#1-2-功能需求" class="headerlink" title="1.2 功能需求"></a>1.2 功能需求</h4><p>（1）用户登录：打开游戏程序后，用户在用户名输入框输入用户名即可进入游戏。<br>（2）开始游戏：游戏界面左上角显示游戏倒计时，用户应在倒计时结束前使游戏面盘内的数字尽可能大。用户可以通过鼠标点击界面的四个方向按钮或者键盘的上下左右键进行操作。当倒计时间到或者游戏无法继续进行时，将弹出“Game Over!”提示信息。<br>（3）退出登录：当用户想要切换登录账户或者退出游戏时，可以点击界面右下角的“退出登陆”按键，游戏将返回登陆界面，同时正在进行的游戏将中断。<br>（4）排行榜：游戏界面右侧文本框显示游戏玩家实时排名。若用户需要刷新排名，可点击右上角“刷新”按键。<br>（5）回放按键：若用户需要回访排行榜内玩家游戏过程，可先在右下角下拉文本框内选择要观看的玩家排名，后点击“观看”按键。之后玩家在弹出的对话框内选择倍速播放的速度，游戏面盘内会按照设定倍速演示游戏过程。演示结束后，游戏面盘会重置，回到游戏。</p>
+<p>（6）其他功能：<br>    当前时间显示：游戏界面左下角显示当前日期和时间，方便用户管理游戏时间；<br>    名人名言：游戏界面中下部滚动显示名人名言，在游戏过程中增添了文化氛围；<br>    背景音乐：游戏运行过程中会有舒缓的轻音乐作为背景音乐，使用户在游戏过程中保持平静和放松的心情；<br>    操作记录：游戏界面中部文本框内显示用户登录信息和实时操作，方便用户查看与记录。</p>
+<h4 id="1-3-假定和约束"><a href="#1-3-假定和约束" class="headerlink" title="1.3 假定和约束"></a>1.3 假定和约束</h4><p>（1）假定用户在输入用户名等信息后，不使用Enter健输入，而是点击确定按钮。并且假定用户在整个游戏过程中不使用Enter键。因为当用户按下Enter键时，Windows就会自动去找输入焦点落在了哪一个按钮上，当获得焦点的按钮的四周将被点线矩形包围。如果所有按钮都没有获得输入焦点，Windows就会自动去寻找程序或资源所指定的默认按钮(默认按钮边框较粗)。如果对话框没有默认按钮，那么即使对话框中没有OK按钮，OnOK函数也会自动被调用。在本游戏中，OnOK函数内并没有响应，如果用户按下Enter，会导致游戏直接关闭。<br>（2）假定用户在观看回放的过程中，不进行其它操作。因为在程序中，当开始观看时，其它功能会被锁定，无法正常运行。<br>（3）假定用户在使用过程中，不会修改游戏的数据文件。因为游戏中的排名信息以及操作数据是读取自这些数据文件。</p>
+<h3 id="2-结构设计"><a href="#2-结构设计" class="headerlink" title="2.结构设计"></a>2.结构设计</h3><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407205829752.png" alt="image-20210407205829752"></p>
+<p>表1：各模块名称及其作用</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用户名输入模块</td>
+<td>使玩家能够输入用户名，并将输入的用户名存储以便后续的调用</td>
+</tr>
+<tr>
+<td>对话框初始化模块</td>
+<td>初始化正式游戏界面，包括绘制面板、消息映射等</td>
+</tr>
+<tr>
+<td>定时器模块</td>
+<td>配置定时器，向倒计时、当前时间显示和名人名言滚动显示等功能提供统一的时间和频率</td>
+</tr>
+<tr>
+<td>操作模块</td>
+<td>配置键盘方向键和四个方向按钮，并对其消息进行拦截和处理，使玩家能通过界面按键和键盘进行控制</td>
+</tr>
+<tr>
+<td>计算模块</td>
+<td>每进行一次操作，对游戏面盘内的数字进行计算</td>
+</tr>
+<tr>
+<td>操作实时显示模块</td>
+<td>在界面文本框内实时显示用户登录信息和操作信息</td>
+</tr>
+<tr>
+<td>文件读写模块</td>
+<td>将用户的基本信息和操作信息通过文件形式存储在硬盘，并且实时更新。在需要时进行读取。</td>
+</tr>
+<tr>
+<td>排行榜模块</td>
+<td>利用所存储的信息，对所有玩家进行排序，并在界面文本框内实时显示玩家排名</td>
+</tr>
+<tr>
+<td>观看模块</td>
+<td>对高分玩家的游戏过程进行回放，用户可以自行选择播放速度</td>
+</tr>
+<tr>
+<td>退出登录模块</td>
+<td>用于切换用户或结束游戏</td>
+</tr>
+</tbody></table>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210510889.png" alt="image-20210407210510889"></p>
+<h3 id="3-详细设计"><a href="#3-详细设计" class="headerlink" title="3.详细设计"></a>3.详细设计</h3><h4 id="3-1-工程建立"><a href="#3-1-工程建立" class="headerlink" title="3.1 工程建立"></a>3.1 工程建立</h4><ol>
+<li><p>打开Visual Studio2017，点击文件——新建——项目；</p>
+</li>
+<li><p>新建MFC应用；</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210621548.png" alt="image-20210407210621548"></p>
+</li>
+</ol>
+<p>图3：新建项目界面<br>3. 选择“基于对话框”；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210631868.png" alt="image-20210407210631868"></p>
+<p>图4：应用程序类型选项界面</p>
+<ol start="4">
+<li>   点击“完成”即可建立工程。</li>
+</ol>
+<h4 id="3-2-界面设计"><a href="#3-2-界面设计" class="headerlink" title="3.2 界面设计"></a>3.2 界面设计</h4><ol>
+<li><p>打开创建的工程文件，选择资源视图，打开对话框界面；</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210722995.png" alt="image-20210407210722995"></p>
+</li>
+</ol>
+<p>图5：对话框初始界面<br>2. 将所需的控件拖入对话框并放置在合适的位置；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210731733.png" alt="image-20210407210731733"></p>
+<p>图6：完成后的对话框界面<br>3. 再次打开资源视图，创建新的对话框界面为欢迎界面</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210739776.png" alt="image-20210407210739776"></p>
+<p>图7：新建对话框界面操作<br>4. 向新建的对话框界面添加控件</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210748103.png" alt="image-20210407210748103"></p>
+<p>图8：完成后的欢迎界面<br>5. 最后，通过On_Paint 函数对窗口进一步美化，配置字体.背景.窗口大小等，并绘制游戏面盘；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210759280.png" alt="image-20210407210759280"></p>
+<p>图9：OnPaint函数部分代码</p>
+<h4 id="3-3-用户名输入模块设计"><a href="#3-3-用户名输入模块设计" class="headerlink" title="3.3 用户名输入模块设计"></a>3.3 用户名输入模块设计</h4><ol>
+<li><p>从“资源视图”打开欢迎界面，放置用于用户输入的文本框；</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210822757.png" alt="image-20210407210822757"></p>
+</li>
+</ol>
+<p>图10：用户名输入框<br>2. 当按下欢迎界面的确定按钮时，对文本框内文字进行处理。因此在“确定”按钮的响应函数内，首先检测文本框内是否有内容，然后将用户名转存至新建的游戏界面类成员内，之后使用EndDialog函数与DoModal函数打开游戏界面，关闭欢迎界面；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210830670.png" alt="image-20210407210830670"></p>
+<p>图11：确定按键响应函数</p>
+<h4 id="3-4-定时器模块设计"><a href="#3-4-定时器模块设计" class="headerlink" title="3.4 定时器模块设计"></a>3.4 定时器模块设计</h4><ol>
+<li><p>首先使用类向导，为游戏程序添加WM_TIMER消息映射，并生成OnTimer处理函数；</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210907203.png" alt="image-20210407210907203"></p>
+</li>
+</ol>
+<p>图12：类向导界面<br>2. 在初始化函数OnInitDialog中配置两个定时器的编号和定时间隔；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210917559.png" alt="image-20210407210917559"></p>
+<p>图13：配置定时器代码<br>3. 在生成的OnTimer处理函数中，添加倒计时.显示当前时间以及名人名言滚动显示的代码。通过对nIDEvent变量的判断，为不同的功能选择不同的时间频率；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210927767.png" alt="image-20210407210927767"></p>
+<p>图14：OnTimer函数部分代码</p>
+<h4 id="3-4-操作模块设计"><a href="#3-4-操作模块设计" class="headerlink" title="3.4 操作模块设计"></a>3.4 操作模块设计</h4><ol>
+<li><p>在游戏中玩家可通过键盘或鼠标点击按钮来操作游戏；</p>
+</li>
+<li><p>键盘操作：通过重载虚函数PreTranslateMessage()对键盘上下左右键进行截取与响应；</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210955093.png" alt="image-20210407210955093"></p>
+</li>
+</ol>
+<p>图15：PreTranslateMessage函数的部分代码<br>3. 鼠标操作：在“资源视图”打开游戏界面对话框，添加四个按钮，表示上下左右，并放置在合适位置，之后在其响应函数中写入相应程序；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211002388.png" alt="image-20210407211002388"></p>
+<p>图16：“↑”按钮响应函数</p>
+<h4 id="3-5计算模块设计"><a href="#3-5计算模块设计" class="headerlink" title="3.5计算模块设计"></a>3.5计算模块设计</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211013036.png" alt="image-20210407211013036"></p>
+<ol>
+<li><p>累加函数</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211057117.png" alt="image-20210407211057117"></p>
+</li>
+</ol>
+<p>图17：累加函数部分代码<br>2. 处理游戏结束：横轴.纵轴分别判断游戏是否能够继续进行。供其它操作函数调用；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211106277.png" alt="image-20210407211106277"></p>
+<p>图18：处理游戏结束函数部分代码<br>3. 上下左右计算：调用累加函数，循环输出后检测变动，判断此方向能否继续移动。若不能，则将对应按钮置灰。</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211114589.png" alt="image-20210407211114589"></p>
+<p>图19：向上计算函数部分代码    </p>
+<h4 id="3-6界面重置模块设计"><a href="#3-6界面重置模块设计" class="headerlink" title="3.6界面重置模块设计"></a>3.6界面重置模块设计</h4><p>被调用时，将界面清零，并随机生成数值，输出到游戏面盘。之后将游戏结束的信息记录在相应的数据文件内。</p>
+<p>  <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211236989.png" alt="image-20210407211236989">                             </p>
+<p>图20：重置函数部分代码</p>
+<h4 id="3-7文件写入模块设计"><a href="#3-7文件写入模块设计" class="headerlink" title="3.7文件写入模块设计"></a>3.7文件写入模块设计</h4><ol>
+<li><p>使用CStdioFile标准库函数进行文件读写操作，供其它操作函数调用；</p>
+</li>
+<li><p>文件读取部分未集成未模块，相应代码在之后的排行榜及观看模块中均有体现；</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211302714.png" alt="image-20210407211302714"></p>
+</li>
+</ol>
+<p>图21：文件写入函数</p>
+<h4 id="3-8排行榜模块设计"><a href="#3-8排行榜模块设计" class="headerlink" title="3.8排行榜模块设计"></a>3.8排行榜模块设计</h4><ol>
+<li><p>创建用户类：其中MAX为用户得分，order为用户在数据文件中所处的位置；</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211327374.png" alt="image-20210407211327374"></p>
+</li>
+</ol>
+<p>图22：用户类<br>2. 使用ReadString函数读取文件，用读取到的信息对用户类对象赋值，使用CArray标准库实现追加；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211333706.png" alt="image-20210407211333706"></p>
+<p>图23：读取和追加部分代码<br>3. 使用交换排序算法对CArray类对象进行排序，并以一定格式输出到文本框控件；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211342524.png" alt="image-20210407211342524"></p>
+<p>图24：排序与输出功能代码</p>
+<h4 id="3-9观看模块设计"><a href="#3-9观看模块设计" class="headerlink" title="3.9观看模块设计"></a>3.9观看模块设计</h4><ol>
+<li><p>在“资源视图”，放置下拉文本框控件在游戏界面，并添加“观看”按钮；</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211419417.png" alt="image-20210407211419417"></p>
+</li>
+</ol>
+<p>图25：观看功能相关控件<br>2. 当玩家按下“观看”按钮时，其响应函数被调用，将布尔型全局变量wop变为FALSE，开启“观看模式”。此时，倒计时停止，玩家操作鼠标或键盘将无效。同时，调用DoModal函数，弹出播放速度选择对话框；</p>
+<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211427250.png" alt="image-20210407211427250"></p>
+<p>图26：“观看”按钮响应函数部分代码</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211433715.png" alt="image-20210407211433715"></p>
+<p>图27：播放速度选择界面<br>3.    根据用户在文本框内所选的玩家信息，在操作数据文件中根据玩家的order成员变量寻找该玩家，找到后将记录的操作信息依次输出至游戏面盘。<br>4.    输出结束后，将变量wop变为TRUE，关闭“观看模式”，玩家继续游戏。</p>
+<h4 id="3-10退出登录模块设计"><a href="#3-10退出登录模块设计" class="headerlink" title="3.10退出登录模块设计"></a>3.10退出登录模块设计</h4><p>用户点击“退出登陆”按钮时，调用EndDialog函数，关闭游戏界面。之后调用DoModal函数，生成新的欢迎界面。</p>
+<h3 id="4-运行结果与分析"><a href="#4-运行结果与分析" class="headerlink" title="4.运行结果与分析"></a>4.运行结果与分析</h3><h4 id="4-1-用户登录功能"><a href="#4-1-用户登录功能" class="headerlink" title="4.1 用户登录功能"></a>4.1 用户登录功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211514579.png" alt="image-20210407211514579"></p>
+<p>图28：用户登录界面</p>
+<h4 id="4-2-基础功能（游戏功能）"><a href="#4-2-基础功能（游戏功能）" class="headerlink" title="4.2 基础功能（游戏功能）"></a>4.2 基础功能（游戏功能）</h4><p>​                               <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211538492.png" alt="image-20210407211538492"></p>
+<p>图29：鼠标与键盘操作游戏</p>
+<p> <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211544421.png" alt="image-20210407211544421"></p>
+<p>图30：当一个方向无法移动时，按钮置灰</p>
+<p> <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211549984.png" alt="image-20210407211549984"></p>
+<p>图31：当所有方向都无法移动时，游戏结束</p>
+<h4 id="4-3当前时间显示功能"><a href="#4-3当前时间显示功能" class="headerlink" title="4.3当前时间显示功能"></a>4.3当前时间显示功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211612733.png" alt="image-20210407211612733"></p>
+<p>图32：显示当前日期与时间</p>
+<h4 id="4-4登录信息及实时操作显示功能"><a href="#4-4登录信息及实时操作显示功能" class="headerlink" title="4.4登录信息及实时操作显示功能"></a>4.4登录信息及实时操作显示功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211635812.png" alt="image-20210407211635812"></p>
+<p>图33：显示玩家登录信息及操作</p>
+<h4 id="4-5排行榜功能"><a href="#4-5排行榜功能" class="headerlink" title="4.5排行榜功能"></a>4.5排行榜功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211649803.png" alt="image-20210407211649803"></p>
+<p>图34：对所有玩家进行排序（最多显示TOP15）</p>
+<h4 id="4-6观看功能"><a href="#4-6观看功能" class="headerlink" title="4.6观看功能"></a>4.6观看功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211658280.png" alt="image-20210407211658280"></p>
+<p>图35：下拉文本框与“观看”按键</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211729265.png" alt="image-20210407211729265"></p>
+<p>图36：播放速度选择对话框</p>
+<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211734856.png" alt="image-20210407211734856"></p>
+<p>图37：正在观看中</p>
+<h4 id="4-7名人名言显示功能"><a href="#4-7名人名言显示功能" class="headerlink" title="4.7名人名言显示功能"></a>4.7名人名言显示功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211750332.png" alt="image-20210407211750332"></p>
+<p>图38：文本框内滚动显示名人名言</p>
+<h4 id="4-8背景音乐功能"><a href="#4-8背景音乐功能" class="headerlink" title="4.8背景音乐功能"></a>4.8背景音乐功能</h4><p>经测试游戏运行中有背景音乐播放</p>
+<h4 id="4-9退出登录功能"><a href="#4-9退出登录功能" class="headerlink" title="4.9退出登录功能"></a>4.9退出登录功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211815174.png" alt="image-20210407211815174"></p>
+<p>图39：点击“退出登录”后返回欢迎界面</p>
+<h2 id="二、问题解决"><a href="#二、问题解决" class="headerlink" title="二、问题解决"></a>二、问题解决</h2><h4 id="（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？"><a href="#（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？" class="headerlink" title="（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？"></a>（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？</h4><p>答：①usr类：表示一个用户的类。成员变量：name——用户名；MAX——得分；order——用户信息在数据文件中的位置。<br>②RandonNum成员函数：无形参，无返回值。随机生成数字2或4，并将其放在游戏面盘的随机位置。<br>③CalcEnd成员函数：无形参，返回BOOL型。判断横轴与纵轴能否继续移动。若能移动，则继续游戏；否则，游戏结束。<br>④reALLBUTTON成员函数：无形参，无返回值。重置四个方向按钮。<br>⑤WriteTXT成员函数：形参CString型，无返回值。向指定文件写入字符串。<br>⑥TravelArrey成员函数：无形参，返回CString型。遍历游戏面盘，并将数据以CString类型返回。<br>⑦TOPList成员函数：无形参，无返回值。将排行榜功能所需的遍历.排序以及输出集成在此函数中。<br>⑧watch成员函数：形参int型，无返回值。完成观看功能，包括查找.遍历.文件读取以及输出。</p>
+<h4 id="（2）小结上机各个环节所出现的错误及解决的办法。"><a href="#（2）小结上机各个环节所出现的错误及解决的办法。" class="headerlink" title="（2）小结上机各个环节所出现的错误及解决的办法。"></a>（2）小结上机各个环节所出现的错误及解决的办法。</h4><p>答：<br><strong>错误一</strong>：定时器相关函数不被执行。<br>解决方法：通过手动输入的配置定时器的代码，即使内容一致，也无法运行。应该通过类向导，加入定时器的消息映射WM_TIMER，程序在执行定时器相关函数。<br><strong>错误二</strong>：调用CString类的Format函数时，报错“没有与参数列表匹配的重载函数”。<br>解决方法：Format函数的形参之一为LPCWSTR类型变量，与字符串的char类型不相符。因此将需要格式化的字符串通过_T函数转换。<br><strong>错误三</strong>：点击“观看”按钮后，本应弹出选择播放速度对话框，但实际情况为界面卡死，无法操作。<br>解决方法：在资源视图中打开要弹出的对话框，将属性中的Visable选项更改为TRUE即可。</p>
+<h2 id="三、主要代码"><a href="#三、主要代码" class="headerlink" title="三、主要代码"></a>三、主要代码</h2><h3 id="1-登陆函数"><a href="#1-登陆函数" class="headerlink" title="1.登陆函数"></a>1.登陆函数</h3><pre><code>void CStartDlg::OnBnClickedStartButton()
+&#123;
+    CString str;
+    //BOOL c;
+    //EndDialog(IDD_START_DIALOG);
+    CMy2048Dlg dlg;
+    GetDlgItem(IDC_EDIT1)-&gt;GetWindowText(str);
+    //CEdit1.GetWindowText();
+        if (str != &quot;&quot;)//判断用户是否输入
+        &#123;
+            EndDialog(IDD_START_DIALOG);//关闭登陆界面
+            dlg.Userr.name = str;
+            dlg.DoModal();//调出游戏界面
+        &#125;
+        else
+        &#123;
+            AfxMessageBox(_T(&quot;请输入用户名&quot;));//提醒用户重新输入
+        &#125;
+&#125;
+</code></pre>
+<h3 id="2-OnPaint函数"><a href="#2-OnPaint函数" class="headerlink" title="2.OnPaint函数"></a>2.OnPaint函数</h3><pre><code>void CMy2048Dlg::OnPaint()
+&#123;
+    if (IsIconic())
+    &#123;
+        CPaintDC dc(this); // 用于绘制的设备上下文
+        SendMessage(WM_ICONERASEBKGND, reinterpret_cast&lt;WPARAM&gt;(dc.GetSafeHdc()), 0);
+        // 使图标在工作区矩形中居中
+        int cxIcon = GetSystemMetrics(SM_CXICON);
+        int cyIcon = GetSystemMetrics(SM_CYICON);
+        CRect rect;
+        GetClientRect(&amp;rect);
+        int x = (rect.Width() - cxIcon + 1) / 2;
+        int y = (rect.Height() - cyIcon + 1) / 2;
+        // 绘制图标
+        dc.DrawIcon(x, y, m_hIcon);
+    &#125;
+    else //初始化游戏面盘
+    &#123;
+        CRect   temprect(0, 0, 1000, 500);
+        CWnd::SetWindowPos(NULL, 0, 0, temprect.Width(), temprect.Height(), SWP_NOZORDER | SWP_NOMOVE);
+        CPaintDC dc(this);
+        GetClientRect(rect);
+        dc.FillSolidRect(rect, RGB(125, 255, 255)); //设置背景颜色
+        GetClientRect(rect);
+        //获取窗口客户区的坐标 客户区坐标是相对窗口客户区的左上角而言的，因此左上角坐标为（0，0）。
+        rect.left   += 20;
+        rect.right  -= 20;
+        rect.top    += 20;
+        rect.bottom -= 20;
+        CRgn rgn;//圆角
+        CRect rc;
+        GetWindowRect(&amp;rc); //获得窗口矩形
+        rc -= rc.TopLeft();
+        rgn.CreateRoundRectRgn(rc.left, rc.top, rc.right, rc.bottom, 50, 50); 
+        //根据窗口矩形创建一个圆角矩形最后两个是形成圆角的大小
+        SetWindowRgn(rgn, TRUE);
+        int nWidth  = rect.Width()/(2*(Count+2)); //每个单元格的宽度
+        int nHeight = rect.Height()/(Count+2);//每个单元格的高度
+        CFont font;
+        font.CreatePointFont(nHeight*4, _T(&quot;Small Fonts&quot;),&amp;dc); //创建字体和大小
+        CFont* oldFont = dc.SelectObject(&amp;font);//保存旧的字体
+        dc.SetBkMode(TRANSPARENT);//设置背景颜色为透明
+        for(int i = 0; i &lt; Count; i++)
+        &#123;
+            for (int j = 0; j &lt; Count; j++)
+            &#123;
+                CRect rectChild;
+                rectChild.left   = rect.left + j*nWidth+ nWidth;
+                rectChild.top    = rect.top  + i*nHeight+ nHeight;
+                rectChild.right  = rectChild.left + nWidth;
+                rectChild.bottom = rectChild.top  + nHeight;
+                dc.Draw3dRect(rectChild,RGB(255,255,0),RGB(255,255,0));
+                if (wop)
+                &#123;
+                    if (m_nArray[i][j] != 0)
+                    &#123;
+                        CString  strText;
+                        strText.Format(_T(&quot;%d&quot;), m_nArray[i][j]);
+    //函数功能是在指定的矩形里写入格式化文本，根据指定的方法对文本格式化
+                        //（扩展的制表符，字符对齐、折行等）
+                        dc.DrawText(strText, rectChild, DT_CENTER | DT_VCENTER);
+                    &#125;
+                &#125;
+                else if (!wop)
+                &#123;
+                    if (n_nArray[i][j] != 0)
+                    &#123;
+                        CString  strText;
+                        strText.Format(_T(&quot;%d&quot;), n_nArray[i][j]);
+
+                        //该函数的功能是在指定的矩形里写入格式化文本，根据指定的方法对文本格式化
+                        //（扩展的制表符，字符对齐、折行等）
+                        dc.DrawText(strText, rectChild, DT_CENTER | DT_VCENTER);
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+        CDialogEx::OnPaint();
+        dc.SelectObject(oldFont);//选则回原来的字体
+        font.DeleteObject();//删除字体
+    &#125;
+&#125;
+</code></pre>
+<h3 id="3-重置界面函数"><a href="#3-重置界面函数" class="headerlink" title="3.重置界面函数"></a>3.重置界面函数</h3><pre><code>//重置，重新开始界面初始化
+void CMy2048Dlg::Reset(void)
+&#123;
+    //int buff[4][4];
+    int max = 0;
+    for(int i = 0; i &lt; Count; i++)
+    &#123;
+        for (int j = 0; j &lt; Count; j++)
+        &#123;
+            m_nArray[i][j] = 0;
+        &#125;
+    &#125;
+    ct = COUNT;
+    RandonNum();
+    RandonNum();
+    CString strrrr;
+    strrrr.Format(_T(&quot;u_%s\n&quot;), Userr.name);
+    WriteNameTXT(strrrr);
+    strrrr.Format(_T(&quot;L_%s\n&quot;), Userr.name);
+    WriteTXT(strrrr);
+    CString strr;
+    strr = TravelArrey();
+    WriteTXT(strr);
+&#125;
+</code></pre>
+<h3 id="4-向下运算函数"><a href="#4-向下运算函数" class="headerlink" title="4.向下运算函数"></a>4.向下运算函数</h3><pre><code>bool CMy2048Dlg::Down(void)
+&#123;
+    if(wop)
+    &#123;
+    int tempArray[Count][Count];
+    memcpy(tempArray, m_nArray, sizeof(int)*Count*Count);
+    reALLBUTTON();
+    deque&lt;int&gt; lst[Count];//声明一个deque&lt;int&gt;类型的数组 数组长度为4，也就是4个deque&lt;int&gt;
+    //分组
+        for (int i = 0; i &lt; Count; i++)
+    &#123;
+        for (int j = 0; j &lt; Count; j++)
+        &#123;
+            if (m_nArray[i][j] != 0)
+            &#123;
+                lst[j].push_front(m_nArray[i][j]);
+            &#125;
+        &#125;
+    &#125;
+    //累加
+    for (int i = 0; i &lt; Count; i++)
+    &#123;
+        Add(lst[i]); 
+//这里假设对于 lst[0];相加后为： lst[0][0]: 4; lst[0][1]:2;没有变化这种情况
+//因为相加的时候是 以lst[0][0], lst[1][0]为基准，所以这里向下相加后，就要反转一下
+        ReservedLst(lst[i]);
+    &#125;
+    //重新赋值
+    for (int i = 0; i &lt; Count; i++)
+    &#123;
+        for (int j = 0; j &lt; Count; j++)
+        &#123;
+            m_nArray[i][j] = lst[j][i]; //注意这里是 lst[j][i] 赋值给 m_nArray[i][j]
+        &#125;
+    &#125;
+
+    //检测变动
+    for (int i = 0; i &lt; Count; i++)
+    &#123;
+        for (int j = 0; j &lt; Count; j++)
+        &#123;
+            if (m_nArray[i][j] != tempArray[i][j])
+            &#123;
+                return true;
+            &#125;
+        &#125;
+    &#125;
+    GetDlgItem(IDC_BUTTON4)-&gt;EnableWindow(FALSE);
+    return false;
+    &#125;return TRUE;
+&#125;
+</code></pre>
+<h3 id="5-游戏结束函数"><a href="#5-游戏结束函数" class="headerlink" title="5.游戏结束函数"></a>5.游戏结束函数</h3><pre><code>bool CMy2048Dlg::CalcEnd(void)
+&#123;
+    if (wop)
+    &#123;
+        //首先处理横轴：
+        for (int i = 0; i &lt; Count; i++)
+        &#123;
+            for (int j = 0; j &lt; Count; j++)
+            &#123;
+                if (m_nArray[i][j] == 0)
+                &#123;
+                    return false;
+                &#125;
+                if (j + 1 == Count)
+                &#123;
+                    break;
+                &#125;
+                if (m_nArray[i][j] == m_nArray[i][j + 1])//判断是否可以累加
+                &#123;
+                    return false;
+                &#125;
+            &#125;
+        &#125;
+        //处理纵轴
+        for (int i = 0; i &lt; Count; i++)
+        &#123;
+            for (int j = 0; j &lt; Count; j++)
+            &#123;
+                if (m_nArray[i][j] == 0)
+                &#123;
+                    return false;
+                &#125;
+                if (i + 1 == Count)
+                &#123;
+                    break;
+                &#125;
+                if (m_nArray[i][j] == m_nArray[i + 1][j])
+                &#123;
+                    return false;
+                &#125;
+            &#125;
+        &#125;
+        return true;
+    &#125;return false;
+&#125;
+</code></pre>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="6-累加函数"><a href="#6-累加函数" class="headerlink" title="6.累加函数"></a>6.累加函数</h3><pre><code>void CMy2048Dlg::Add( deque&lt;int&gt; &amp;list)
+&#123;
+    if (wop)
+    &#123;
+        for (int i = 0; i &lt;int(list.size()); i++)
+        &#123;
+            if (list[i] == 0)
+                continue;
+            for (int j = i + 1; j &lt;int(list.size()); j++)
+            &#123;
+                if (list[i] == list[j])
+                &#123;
+                    list[i] *= 2;
+                    list[j] = 0;
+                    break;
+                &#125;
+//如果当前的值不为0  跳出内循环，没必要再比较例如：  4 2 2 ； 当 list[0]=4,list[1]=2list[1] = 2 != 0,直接跳出循环，没必要再比较 list[2]与 list[0]
+                if (list[j] != 0)
+                &#123;
+                    break;
+                &#125;
+            &#125;
+        &#125;
+        //重新排列顺序，不足补0；
+        //例如 4 2  经过上面的代码其实没有任何变化累加，但是累加最后的结果要变为  4 2 0 0  
+        deque&lt;int&gt; tempLst;
+        for (int i = 0; i &lt;int(list.size()); i++)
+        &#123;
+            //双端队列支持对元素的下标访问
+            if (list[i] != 0)
+            &#123;
+                tempLst.push_back(list[i]);
+            &#125;
+        &#125;
+        list = tempLst; //这个时候 list的元素为： 4 2 ，所以下面要补0
+        for (int i = list.size(); i &lt; Count; i++)
+        &#123;
+            list.push_back(0); //list 的元素为： 4 2 0 0 
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="7-向上按钮响应函数"><a href="#7-向上按钮响应函数" class="headerlink" title="7.向上按钮响应函数"></a>7.向上按钮响应函数</h3><pre><code>void CMy2048Dlg::OnBnClickedButton2()
+&#123;
+    // TODO: 在此添加控件通知处理程序代码
+    //sign = 1;
+    CString str;
+    bool bRet;
+    if (wop)
+    &#123;
+        List1.AddString(_T(&quot;↑&quot;));
+        CString strr;
+        strr = TravelArrey();
+        WriteTXT(strr);
+        bRet = Up();
+        TOPControl(bRet);
+    &#125;
+&#125;
+</code></pre>
+<h3 id="8-TOPControl函数"><a href="#8-TOPControl函数" class="headerlink" title="8.TOPControl函数"></a>8.TOPControl函数</h3><pre><code>void CMy2048Dlg::TOPControl(bool n)
+&#123;
+    if (CalcEnd())//判断游戏是否结束
+    &#123;
+    AfxMessageBox(_T(&quot;GameOver!&quot;));List1.AddString(_T(&quot;GameOver!&quot;));
+                //List1.AddString(_T(&quot;GameOver!&quot;));
+        int buff[4][4];
+        int max = 0;
+        for (int i = 0; i &lt; 4; i++)//遍历找出最大值并输出
+            for (int j = 0; j &lt; 4; j++)
+            &#123;
+                buff[i][j] = m_nArray[i][j];
+                if (buff[i][j] &gt; max)
+                    max = buff[i][j];
+            &#125;
+        CString st;
+        st.Format(_T(&quot;m_%d\n&quot;), max);
+        WriteNameTXT(st);//记录游戏信息
+        CString strrr;
+        strrr.Format(_T(&quot;O_%s\n&quot;), Userr.name);
+        WriteTXT(strrr);
+        Reset();//重置游戏
+        TOPList();//排行榜函数
+    &#125;
+    else
+    &#123;
+        if (n)
+        &#123;
+            RandonNum();
+            Invalidate(TRUE);
+            if (CalcEnd())
+            &#123;                AfxMessageBox(_T(&quot;GameOver!&quot;));List1.AddString(_T(&quot;GameOver!&quot;));
+                int buff[4][4];
+                int max = 0;
+                for (int i = 0; i &lt; 4; i++)//遍历找出最大值并输出
+                    for (int j = 0; j &lt; 4; j++)
+                    &#123;
+                        buff[i][j] = m_nArray[i][j];
+                        if (buff[i][j] &gt; max)
+                            max = buff[i][j];
+                    &#125;
+                CString st;
+                st.Format(_T(&quot;m_%d\n&quot;), max);
+                WriteNameTXT(st);
+                CString strrr;
+                strrr.Format(_T(&quot;O_%s\n&quot;), Userr.name);
+                WriteTXT(strrr);
+                Reset();
+                TOPList();
+            &#125;
+        &#125;
+    &#125;
+    Invalidate(TRUE);
+&#125;
+</code></pre>
+<h3 id="9-定时器相关函数"><a href="#9-定时器相关函数" class="headerlink" title="9.定时器相关函数"></a>9.定时器相关函数</h3><pre><code>void CMy2048Dlg::OnTimer(UINT_PTR nIDEvent)
+&#123;
+    if(nIDEvent==1&amp;&amp;wop)//判断事件来自哪个定时器
+    &#123;
+        // TODO: 在此添加消息处理程序代码和/或调用默认值
+        //sign2 = 0;
+        CString str, str1, str2, str3;
+        int Minute, Second; //分，秒
+        Minute = ct / 60; //分
+        Second = ct % 60;  //秒
+        if (Second == 0)
+        &#123;
+            Second = 59;
+            if (Minute &gt; 0)
+                Minute = Minute - 1;
+        &#125;
+        else
+        &#123;
+            Second = Second - 1;//自减1倒计时
+        &#125;
+        if (Second &gt;= 10)
+            str2.Format(_T(&quot;%d:%d&quot;), Minute, Second);
+        else
+            str2.Format(_T(&quot;%d:0%d&quot;), Minute, Second);
+        //str2.Format(_T(&quot;%d&quot;), Second);
+        SetDlgItemText(IDC_EDIT2, str2);
+        if (Minute == 0 &amp;&amp; Second == 0&amp;&amp;sign2==0)
+        &#123;
+            sign2++;
+            //AfxMessageBox(_T(&quot;GameOver!&quot;));
+            if (MessageBox(_T(&quot;Game Over!&quot;), _T(&quot;时间到&quot;))== 1)
+            &#123;
+                sign2 = 0;
+                List1.AddString(_T(&quot;GameOver!&quot;));
+                
+                int buff[4][4];
+                int max = 0;
+                for (int i = 0; i &lt; 4; i++)//遍历找出最大值并输出
+                    for (int j = 0; j &lt; 4; j++)
+                    &#123;
+                        buff[i][j] = m_nArray[i][j];
+                        if (buff[i][j] &gt; max)
+                            max = buff[i][j];
+                    &#125;
+                CString st;
+                st.Format(_T(&quot;m_%d\n&quot;), max);
+                WriteNameTXT(st);
+                Invalidate(TRUE);
+                CString strrr;
+                strrr.Format(_T(&quot;O_%s\n&quot;), Userr.name);
+                WriteTXT(strrr);
+                Reset();//此处修改只显示一次
+                
+                TOPList();
+            &#125;        
+        &#125;
+        else if (Minute == 0 &amp;&amp; Second == 0 &amp;&amp; sign2 != 0)
+        &#123;
+            sign2++;
+            ct = COUNT;
+        &#125;
+        ct = ct - 1;
+
+        CTime tm = CTime::GetCurrentTime();
+        str3.Format(_T(&quot;%d-%02d-%02d  %02d:%02d:%02d&quot;), tm.GetYear(), tm.GetMonth(), tm.GetDay(), tm.GetHour(), tm.GetMinute(), tm.GetSecond());
+        GetDlgItem(IDC_EDIT1)-&gt;EnableWindow(FALSE);
+        GetDlgItem(IDC_EDIT1)-&gt;SetWindowText(str3);
+    &#125;
+    else if (nIDEvent == 2)
+    &#123;
+        CString str;
+        if (sign == 10) sign = 1;
+        else sign++;
+        switch (sign)//选择要显示的名人名言
+        &#123;
+        case 1:
+            str = word1;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        case 2:
+            str = word2;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        case 3:
+            str = word3;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        case 4:
+            str = word4;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        case 5:
+            str = word5;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        case 6:
+            str = word6;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        case 7:
+            str = word7;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        case 8:
+            str = word8;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        case 9:
+            str = word9;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        case 10:
+            str = word10;
+            SetDlgItemText(IDC_EDIT3, str);
+            break;
+        &#125;
+    &#125;
+    CDialogEx::OnTimer(nIDEvent);
+&#125;
+</code></pre>
+<h3 id="10-排行榜函数"><a href="#10-排行榜函数" class="headerlink" title="10.排行榜函数"></a>10.排行榜函数</h3><pre><code>void CMy2048Dlg::TOPList()
+&#123;
+    CString cstrFileFullPath = _T(&quot;C:\\Users\\11817\\Desktop\\计算机大实验\\2048demo\\name.txt&quot;);
+    USES_CONVERSION;
+    CStdioFile cssFile;
+    CString cstrLine;
+    //usr *u = new usr;
+    u.RemoveAll();
+    int z=0;
+    BOOL ret = cssFile.Open(cstrFileFullPath,
+        CFile::modeRead | CFile::shareDenyNone);
+    if (!ret)
+    &#123;
+        AfxMessageBox(_T(&quot;读取文件失败&quot;));
+        return;
+    &#125;
+    cssFile.SeekToBegin();
+    while (cssFile.ReadString(cstrLine))
+    &#123;
+        
+        //z++;
+        if (cstrLine==&quot;u_&quot;)
+        &#123;
+            continue;
+        &#125;
+        else if (cstrLine != &quot;u_&quot; &amp;&amp; cstrLine.GetAt(0)==&#39;u&#39;)
+//查找用户名关键字
+        &#123;
+            usr temp;
+            int l=cstrLine.GetLength();
+            CString ste= cstrLine.Right(l-2);
+            //ste.Format(_T(&quot;%s&quot;),)
+            temp.name = ste;
+            temp.order = z+1;
+            u.Add(temp);
+            //u = new usr;
+            //u[z].name = cstrLine;
+            z++;
+            //countt++;
+        &#125;
+        else if (cstrLine != &quot;u_&quot; &amp;&amp;cstrLine.GetAt(0) == &#39;m&#39;)//查找成绩关键字
+        &#123;
+            int i,k,l;
+            char s[4] = &#123;0&#125;;
+            l = cstrLine.GetLength();
+            for (i = 0; i&lt;l-2; i++)
+            &#123;
+                char y;
+                 y= cstrLine.GetAt(i + 2);
+                 s[i] = y;
+            &#125;
+            //s.Add( &#39;\0&#39;);             
+            k = atoi(s);
+            u[z-1].MAX = k;    
+        &#125;
+    &#125;
+    usr max;
+    int tempmax = z - 1;//交换排序
+    for (int i = 0; i &lt;z; i++)
+    &#123;
+        for (int j = z-1; j &gt;0; j--)
+        &#123;
+            if (u[i].MAX &lt;= u[j].MAX)
+            &#123;
+                max = u[i];
+                u[i] = u[j];
+                u[j] = max;
+            &#125;
+        &#125;
+    &#125;
+    List2.ResetContent();
+    TOPu.RemoveAll();//清空排序记录
+    for (int i=0,v=0; i&lt;z-1&amp;&amp;v&lt;20;i++ )
+    &#123;
+        CString str,str2;
+        str2.Format(_T(&quot;|分数：&quot;));
+        if (u[i].MAX != 0)
+        &#123;
+            usr temp;
+            if (v &lt; 15)
+            &#123;
+                str.Format(_T(&quot;第%d名：%-8s%s%-4d&quot;), v + 1, u[i].name, str2, u[i].MAX);
+                List2.AddString(str);//输出至列表
+            &#125;
+            temp = u[i];
+            TOPu.Add(temp);
+            v++;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="11-回放函数"><a href="#11-回放函数" class="headerlink" title="11.回放函数"></a>11.回放函数</h3><pre><code>void CMy2048Dlg::watch(int x,int s)
+&#123;
+    //TOPu[x];
+    CPaintDC dc(this);
+    int y=0;
+    CString cstrFileFullPath = _T(&quot;C:\\Users\\11817\\Desktop\\计算机大实验\\2048demo\\data.txt&quot;);
+    USES_CONVERSION;
+    CStdioFile cssFile;
+    CString cstrLine;
+    BOOL ret = cssFile.Open(cstrFileFullPath,
+        CFile::modeRead | CFile::shareDenyNone);
+    if (!ret)
+    &#123;
+        AfxMessageBox(_T(&quot;读取文件失败&quot;));
+        return;
+    &#125;
+    cssFile.SeekToBegin();
+    while (cssFile.ReadString(cstrLine))
+    &#123;
+        int u=0;
+        if (cstrLine.GetAt(0) == &#39;L&#39;)
+            y++;
+        if (y == TOPu[x].order)
+        &#123;
+            u = 1;
+            /*CString stt;
+            stt.Format(_T(&quot;%s&quot;), TOPu[x].name);
+            SetDlgItemText(IDC_EDIT4, stt);*/
+            for (int i = 0;  ; i++)
+            &#123;
+                if (cssFile.ReadString(cstrLine) &amp;&amp; cstrLine.GetAt(0) != &#39;O&#39;&amp;&amp;cstrLine.GetAt(0) != &#39;L&#39;)
+                &#123;
+                    for (int j = 0; j &lt; Count; j++)
+                        for (int h = 0; h &lt; Count; h++)
+                        &#123;
+                            CString temp; char *temps;
+                            temp = cstrLine.Mid(25 * j + 5 * h, 25 * j + 5 * (h + 1));
+                            temps = W2A(temp.GetBuffer());
+                            int m=atoi(temps);
+                            n_nArray[j][h] = m;
+                        &#125;
+                    Invalidate();
+                    XSleep(s);//延时300ms
+                    //List1.AddString(_T(&quot;*&quot;));
+                &#125;
+                else
+                    break;
+            &#125;
+        &#125;
+        if(u)
+            break;
+    &#125;
+    wop = TRUE;
+&#125;
+</code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Qianyu Zhang</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://QianyuZhang118.github.io/2021/04/07/2048-finish-report/">http://QianyuZhang118.github.io/2021/04/07/2048-finish-report/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Qianyu Zhang</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/2048/">
+                                    <span class="chip bg-color">2048</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">Your reward, my power.</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/04/07/2048-finish-report/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="2048_Finish_report">
+                        
+                        <span class="card-title">2048_Finish_report</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MFC/" class="post-category">
+                                    MFC
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/2048/">
+                        <span class="chip bg-color">2048</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/07/2048start/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="2048Start">
+                        
+                        <span class="card-title">2048Start</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MFC/" class="post-category">
+                                    MFC
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/2048/">
+                        <span class="chip bg-color">2048</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Qianyu Zhang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/QianyuZhang118" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:chdzhangqianyu@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181743421" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181743421" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+	<a href="https://space.bilibili.com/350517037" class="tooltipped" target="_blank" data-tooltip="BILIBILI" data-position="top" data-delay="50">
+		<i class="fas fa-rss"></i>
+	</a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
