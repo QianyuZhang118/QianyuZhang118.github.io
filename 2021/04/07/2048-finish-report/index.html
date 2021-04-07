@@ -465,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.4k
+                    6.5k
                 </div>
                 
 
@@ -663,611 +663,611 @@
 <p>图39：点击“退出登录”后返回欢迎界面</p>
 <h2 id="二、问题解决"><a href="#二、问题解决" class="headerlink" title="二、问题解决"></a>二、问题解决</h2><h4 id="（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？"><a href="#（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？" class="headerlink" title="（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？"></a>（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？</h4><p>答：①usr类：表示一个用户的类。成员变量：name——用户名；MAX——得分；order——用户信息在数据文件中的位置。<br>②RandonNum成员函数：无形参，无返回值。随机生成数字2或4，并将其放在游戏面盘的随机位置。<br>③CalcEnd成员函数：无形参，返回BOOL型。判断横轴与纵轴能否继续移动。若能移动，则继续游戏；否则，游戏结束。<br>④reALLBUTTON成员函数：无形参，无返回值。重置四个方向按钮。<br>⑤WriteTXT成员函数：形参CString型，无返回值。向指定文件写入字符串。<br>⑥TravelArrey成员函数：无形参，返回CString型。遍历游戏面盘，并将数据以CString类型返回。<br>⑦TOPList成员函数：无形参，无返回值。将排行榜功能所需的遍历.排序以及输出集成在此函数中。<br>⑧watch成员函数：形参int型，无返回值。完成观看功能，包括查找.遍历.文件读取以及输出。</p>
 <h4 id="（2）小结上机各个环节所出现的错误及解决的办法。"><a href="#（2）小结上机各个环节所出现的错误及解决的办法。" class="headerlink" title="（2）小结上机各个环节所出现的错误及解决的办法。"></a>（2）小结上机各个环节所出现的错误及解决的办法。</h4><p>答：<br><strong>错误一</strong>：定时器相关函数不被执行。<br>解决方法：通过手动输入的配置定时器的代码，即使内容一致，也无法运行。应该通过类向导，加入定时器的消息映射WM_TIMER，程序在执行定时器相关函数。<br><strong>错误二</strong>：调用CString类的Format函数时，报错“没有与参数列表匹配的重载函数”。<br>解决方法：Format函数的形参之一为LPCWSTR类型变量，与字符串的char类型不相符。因此将需要格式化的字符串通过_T函数转换。<br><strong>错误三</strong>：点击“观看”按钮后，本应弹出选择播放速度对话框，但实际情况为界面卡死，无法操作。<br>解决方法：在资源视图中打开要弹出的对话框，将属性中的Visable选项更改为TRUE即可。</p>
-<h2 id="三、主要代码"><a href="#三、主要代码" class="headerlink" title="三、主要代码"></a>三、主要代码</h2><h3 id="1-登陆函数"><a href="#1-登陆函数" class="headerlink" title="1.登陆函数"></a>1.登陆函数</h3><pre><code>void CStartDlg::OnBnClickedStartButton()
-&#123;
-    CString str;
-    //BOOL c;
-    //EndDialog(IDD_START_DIALOG);
-    CMy2048Dlg dlg;
-    GetDlgItem(IDC_EDIT1)-&gt;GetWindowText(str);
-    //CEdit1.GetWindowText();
-        if (str != &quot;&quot;)//判断用户是否输入
-        &#123;
-            EndDialog(IDD_START_DIALOG);//关闭登陆界面
-            dlg.Userr.name = str;
-            dlg.DoModal();//调出游戏界面
-        &#125;
-        else
-        &#123;
-            AfxMessageBox(_T(&quot;请输入用户名&quot;));//提醒用户重新输入
-        &#125;
-&#125;
+<h2 id="三、主要代码"><a href="#三、主要代码" class="headerlink" title="三、主要代码"></a>三、主要代码</h2><h3 id="1-登陆函数"><a href="#1-登陆函数" class="headerlink" title="1.登陆函数"></a>1.登陆函数</h3><pre class=" language-bash"><code class="language-bash">void CStartDlg::OnBnClickedStartButton<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    CString str<span class="token punctuation">;</span>
+    //BOOL c<span class="token punctuation">;</span>
+    //EndDialog<span class="token punctuation">(</span>IDD_START_DIALOG<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    CMy2048Dlg dlg<span class="token punctuation">;</span>
+    GetDlgItem<span class="token punctuation">(</span>IDC_EDIT1<span class="token punctuation">)</span>-<span class="token operator">></span>GetWindowText<span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    //CEdit1.GetWindowText<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>str <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">)</span>//判断用户是否输入
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            EndDialog<span class="token punctuation">(</span>IDD_START_DIALOG<span class="token punctuation">)</span><span class="token punctuation">;</span>//关闭登陆界面
+            dlg.Userr.name <span class="token operator">=</span> str<span class="token punctuation">;</span>
+            dlg.DoModal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//调出游戏界面
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token keyword">else</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            AfxMessageBox<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"请输入用户名"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>//提醒用户重新输入
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id="2-OnPaint函数"><a href="#2-OnPaint函数" class="headerlink" title="2.OnPaint函数"></a>2.OnPaint函数</h3><pre><code>void CMy2048Dlg::OnPaint()
-&#123;
-    if (IsIconic())
-    &#123;
-        CPaintDC dc(this); // 用于绘制的设备上下文
-        SendMessage(WM_ICONERASEBKGND, reinterpret_cast&lt;WPARAM&gt;(dc.GetSafeHdc()), 0);
+<h3 id="2-OnPaint函数"><a href="#2-OnPaint函数" class="headerlink" title="2.OnPaint函数"></a>2.OnPaint函数</h3><pre class=" language-bash"><code class="language-bash">void CMy2048Dlg::OnPaint<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>IsIconic<span class="token punctuation">(</span><span class="token punctuation">))</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        CPaintDC dc<span class="token punctuation">(</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span> // 用于绘制的设备上下文
+        SendMessage<span class="token punctuation">(</span>WM_ICONERASEBKGND, reinterpret_cast<span class="token operator">&lt;</span>WPARAM<span class="token operator">></span><span class="token punctuation">(</span>dc.GetSafeHdc<span class="token punctuation">(</span><span class="token punctuation">))</span>, 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
         // 使图标在工作区矩形中居中
-        int cxIcon = GetSystemMetrics(SM_CXICON);
-        int cyIcon = GetSystemMetrics(SM_CYICON);
-        CRect rect;
-        GetClientRect(&amp;rect);
-        int x = (rect.Width() - cxIcon + 1) / 2;
-        int y = (rect.Height() - cyIcon + 1) / 2;
+        int cxIcon <span class="token operator">=</span> GetSystemMetrics<span class="token punctuation">(</span>SM_CXICON<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        int cyIcon <span class="token operator">=</span> GetSystemMetrics<span class="token punctuation">(</span>SM_CYICON<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        CRect rect<span class="token punctuation">;</span>
+        GetClientRect<span class="token punctuation">(</span><span class="token operator">&amp;</span>rect<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        int x <span class="token operator">=</span> <span class="token punctuation">(</span>rect.Width<span class="token punctuation">(</span><span class="token punctuation">)</span> - cxIcon + 1<span class="token punctuation">)</span> / 2<span class="token punctuation">;</span>
+        int y <span class="token operator">=</span> <span class="token punctuation">(</span>rect.Height<span class="token punctuation">(</span><span class="token punctuation">)</span> - cyIcon + 1<span class="token punctuation">)</span> / 2<span class="token punctuation">;</span>
         // 绘制图标
-        dc.DrawIcon(x, y, m_hIcon);
-    &#125;
-    else //初始化游戏面盘
-    &#123;
-        CRect   temprect(0, 0, 1000, 500);
-        CWnd::SetWindowPos(NULL, 0, 0, temprect.Width(), temprect.Height(), SWP_NOZORDER | SWP_NOMOVE);
-        CPaintDC dc(this);
-        GetClientRect(rect);
-        dc.FillSolidRect(rect, RGB(125, 255, 255)); //设置背景颜色
-        GetClientRect(rect);
+        dc.DrawIcon<span class="token punctuation">(</span>x, y, m_hIcon<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token keyword">else</span> //初始化游戏面盘
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        CRect   temprect<span class="token punctuation">(</span>0, 0, 1000, 500<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        CWnd::SetWindowPos<span class="token punctuation">(</span>NULL, 0, 0, temprect.Width<span class="token punctuation">(</span><span class="token punctuation">)</span>, temprect.Height<span class="token punctuation">(</span><span class="token punctuation">)</span>, SWP_NOZORDER <span class="token operator">|</span> SWP_NOMOVE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        CPaintDC dc<span class="token punctuation">(</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        GetClientRect<span class="token punctuation">(</span>rect<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dc.FillSolidRect<span class="token punctuation">(</span>rect, RGB<span class="token punctuation">(</span>125, 255, 255<span class="token punctuation">))</span><span class="token punctuation">;</span> //设置背景颜色
+        GetClientRect<span class="token punctuation">(</span>rect<span class="token punctuation">)</span><span class="token punctuation">;</span>
         //获取窗口客户区的坐标 客户区坐标是相对窗口客户区的左上角而言的，因此左上角坐标为（0，0）。
-        rect.left   += 20;
-        rect.right  -= 20;
-        rect.top    += 20;
-        rect.bottom -= 20;
-        CRgn rgn;//圆角
-        CRect rc;
-        GetWindowRect(&amp;rc); //获得窗口矩形
-        rc -= rc.TopLeft();
-        rgn.CreateRoundRectRgn(rc.left, rc.top, rc.right, rc.bottom, 50, 50); 
+        rect.left   +<span class="token operator">=</span> 20<span class="token punctuation">;</span>
+        rect.right  -<span class="token operator">=</span> 20<span class="token punctuation">;</span>
+        rect.top    +<span class="token operator">=</span> 20<span class="token punctuation">;</span>
+        rect.bottom -<span class="token operator">=</span> 20<span class="token punctuation">;</span>
+        CRgn rgn<span class="token punctuation">;</span>//圆角
+        CRect rc<span class="token punctuation">;</span>
+        GetWindowRect<span class="token punctuation">(</span><span class="token operator">&amp;</span>rc<span class="token punctuation">)</span><span class="token punctuation">;</span> //获得窗口矩形
+        rc -<span class="token operator">=</span> rc.TopLeft<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        rgn.CreateRoundRectRgn<span class="token punctuation">(</span>rc.left, rc.top, rc.right, rc.bottom, 50, 50<span class="token punctuation">)</span><span class="token punctuation">;</span> 
         //根据窗口矩形创建一个圆角矩形最后两个是形成圆角的大小
-        SetWindowRgn(rgn, TRUE);
-        int nWidth  = rect.Width()/(2*(Count+2)); //每个单元格的宽度
-        int nHeight = rect.Height()/(Count+2);//每个单元格的高度
-        CFont font;
-        font.CreatePointFont(nHeight*4, _T(&quot;Small Fonts&quot;),&amp;dc); //创建字体和大小
-        CFont* oldFont = dc.SelectObject(&amp;font);//保存旧的字体
-        dc.SetBkMode(TRANSPARENT);//设置背景颜色为透明
-        for(int i = 0; i &lt; Count; i++)
-        &#123;
-            for (int j = 0; j &lt; Count; j++)
-            &#123;
-                CRect rectChild;
-                rectChild.left   = rect.left + j*nWidth+ nWidth;
-                rectChild.top    = rect.top  + i*nHeight+ nHeight;
-                rectChild.right  = rectChild.left + nWidth;
-                rectChild.bottom = rectChild.top  + nHeight;
-                dc.Draw3dRect(rectChild,RGB(255,255,0),RGB(255,255,0));
-                if (wop)
-                &#123;
-                    if (m_nArray[i][j] != 0)
-                    &#123;
-                        CString  strText;
-                        strText.Format(_T(&quot;%d&quot;), m_nArray[i][j]);
+        SetWindowRgn<span class="token punctuation">(</span>rgn, TRUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        int nWidth  <span class="token operator">=</span> rect.Width<span class="token punctuation">(</span><span class="token punctuation">)</span>/<span class="token punctuation">(</span>2*<span class="token punctuation">(</span>Count+2<span class="token punctuation">))</span><span class="token punctuation">;</span> //每个单元格的宽度
+        int nHeight <span class="token operator">=</span> rect.Height<span class="token punctuation">(</span><span class="token punctuation">)</span>/<span class="token punctuation">(</span>Count+2<span class="token punctuation">)</span><span class="token punctuation">;</span>//每个单元格的高度
+        CFont font<span class="token punctuation">;</span>
+        font.CreatePointFont<span class="token punctuation">(</span>nHeight*4, _T<span class="token punctuation">(</span><span class="token string">"Small Fonts"</span><span class="token punctuation">)</span>,<span class="token operator">&amp;</span>dc<span class="token punctuation">)</span><span class="token punctuation">;</span> //创建字体和大小
+        CFont* oldFont <span class="token operator">=</span> dc.SelectObject<span class="token punctuation">(</span><span class="token operator">&amp;</span>font<span class="token punctuation">)</span><span class="token punctuation">;</span>//保存旧的字体
+        dc.SetBkMode<span class="token punctuation">(</span>TRANSPARENT<span class="token punctuation">)</span><span class="token punctuation">;</span>//设置背景颜色为透明
+        for<span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                CRect rectChild<span class="token punctuation">;</span>
+                rectChild.left   <span class="token operator">=</span> rect.left + j*nWidth+ nWidth<span class="token punctuation">;</span>
+                rectChild.top    <span class="token operator">=</span> rect.top  + i*nHeight+ nHeight<span class="token punctuation">;</span>
+                rectChild.right  <span class="token operator">=</span> rectChild.left + nWidth<span class="token punctuation">;</span>
+                rectChild.bottom <span class="token operator">=</span> rectChild.top  + nHeight<span class="token punctuation">;</span>
+                dc.Draw3dRect<span class="token punctuation">(</span>rectChild,RGB<span class="token punctuation">(</span>255,255,0<span class="token punctuation">)</span>,RGB<span class="token punctuation">(</span>255,255,0<span class="token punctuation">))</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>wop<span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> 0<span class="token punctuation">)</span>
+                    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                        CString  strText<span class="token punctuation">;</span>
+                        strText.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">)</span>, m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     //函数功能是在指定的矩形里写入格式化文本，根据指定的方法对文本格式化
                         //（扩展的制表符，字符对齐、折行等）
-                        dc.DrawText(strText, rectChild, DT_CENTER | DT_VCENTER);
-                    &#125;
-                &#125;
-                else if (!wop)
-                &#123;
-                    if (n_nArray[i][j] != 0)
-                    &#123;
-                        CString  strText;
-                        strText.Format(_T(&quot;%d&quot;), n_nArray[i][j]);
+                        dc.DrawText<span class="token punctuation">(</span>strText, rectChild, DT_CENTER <span class="token operator">|</span> DT_VCENTER<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>wop<span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>n_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> 0<span class="token punctuation">)</span>
+                    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                        CString  strText<span class="token punctuation">;</span>
+                        strText.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">)</span>, n_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
                         //该函数的功能是在指定的矩形里写入格式化文本，根据指定的方法对文本格式化
                         //（扩展的制表符，字符对齐、折行等）
-                        dc.DrawText(strText, rectChild, DT_CENTER | DT_VCENTER);
-                    &#125;
-                &#125;
-            &#125;
-        &#125;
-        CDialogEx::OnPaint();
-        dc.SelectObject(oldFont);//选则回原来的字体
-        font.DeleteObject();//删除字体
-    &#125;
-&#125;
+                        dc.DrawText<span class="token punctuation">(</span>strText, rectChild, DT_CENTER <span class="token operator">|</span> DT_VCENTER<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        CDialogEx::OnPaint<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dc.SelectObject<span class="token punctuation">(</span>oldFont<span class="token punctuation">)</span><span class="token punctuation">;</span>//选则回原来的字体
+        font.DeleteObject<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//删除字体
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id="3-重置界面函数"><a href="#3-重置界面函数" class="headerlink" title="3.重置界面函数"></a>3.重置界面函数</h3><pre><code>//重置，重新开始界面初始化
-void CMy2048Dlg::Reset(void)
-&#123;
-    //int buff[4][4];
-    int max = 0;
-    for(int i = 0; i &lt; Count; i++)
-    &#123;
-        for (int j = 0; j &lt; Count; j++)
-        &#123;
-            m_nArray[i][j] = 0;
-        &#125;
-    &#125;
-    ct = COUNT;
-    RandonNum();
-    RandonNum();
-    CString strrrr;
-    strrrr.Format(_T(&quot;u_%s\n&quot;), Userr.name);
-    WriteNameTXT(strrrr);
-    strrrr.Format(_T(&quot;L_%s\n&quot;), Userr.name);
-    WriteTXT(strrrr);
-    CString strr;
-    strr = TravelArrey();
-    WriteTXT(strr);
-&#125;
+<h3 id="3-重置界面函数"><a href="#3-重置界面函数" class="headerlink" title="3.重置界面函数"></a>3.重置界面函数</h3><pre class=" language-bash"><code class="language-bash">//重置，重新开始界面初始化
+void CMy2048Dlg::Reset<span class="token punctuation">(</span>void<span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    //int buff<span class="token punctuation">[</span>4<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    int max <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+    for<span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    ct <span class="token operator">=</span> COUNT<span class="token punctuation">;</span>
+    RandonNum<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    RandonNum<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    CString strrrr<span class="token punctuation">;</span>
+    strrrr.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"u_%s\n"</span><span class="token punctuation">)</span>, Userr.name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    WriteNameTXT<span class="token punctuation">(</span>strrrr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    strrrr.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"L_%s\n"</span><span class="token punctuation">)</span>, Userr.name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    WriteTXT<span class="token punctuation">(</span>strrrr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    CString strr<span class="token punctuation">;</span>
+    strr <span class="token operator">=</span> TravelArrey<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    WriteTXT<span class="token punctuation">(</span>strr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id="4-向下运算函数"><a href="#4-向下运算函数" class="headerlink" title="4.向下运算函数"></a>4.向下运算函数</h3><pre><code>bool CMy2048Dlg::Down(void)
-&#123;
-    if(wop)
-    &#123;
-    int tempArray[Count][Count];
-    memcpy(tempArray, m_nArray, sizeof(int)*Count*Count);
-    reALLBUTTON();
-    deque&lt;int&gt; lst[Count];//声明一个deque&lt;int&gt;类型的数组 数组长度为4，也就是4个deque&lt;int&gt;
+<h3 id="4-向下运算函数"><a href="#4-向下运算函数" class="headerlink" title="4.向下运算函数"></a>4.向下运算函数</h3><pre class=" language-bash"><code class="language-bash">bool CMy2048Dlg::Down<span class="token punctuation">(</span>void<span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    if<span class="token punctuation">(</span>wop<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    int tempArray<span class="token punctuation">[</span>Count<span class="token punctuation">]</span><span class="token punctuation">[</span>Count<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    memcpy<span class="token punctuation">(</span>tempArray, m_nArray, sizeof<span class="token punctuation">(</span>int<span class="token punctuation">)</span>*Count*Count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    reALLBUTTON<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    deque<span class="token operator">&lt;</span>int<span class="token operator">></span> lst<span class="token punctuation">[</span>Count<span class="token punctuation">]</span><span class="token punctuation">;</span>//声明一个deque<span class="token operator">&lt;</span>int<span class="token operator">></span>类型的数组 数组长度为4，也就是4个deque<span class="token operator">&lt;</span>int<span class="token operator">></span>
     //分组
-        for (int i = 0; i &lt; Count; i++)
-    &#123;
-        for (int j = 0; j &lt; Count; j++)
-        &#123;
-            if (m_nArray[i][j] != 0)
-            &#123;
-                lst[j].push_front(m_nArray[i][j]);
-            &#125;
-        &#125;
-    &#125;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> 0<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                lst<span class="token punctuation">[</span>j<span class="token punctuation">]</span>.push_front<span class="token punctuation">(</span>m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
     //累加
-    for (int i = 0; i &lt; Count; i++)
-    &#123;
-        Add(lst[i]); 
-//这里假设对于 lst[0];相加后为： lst[0][0]: 4; lst[0][1]:2;没有变化这种情况
-//因为相加的时候是 以lst[0][0], lst[1][0]为基准，所以这里向下相加后，就要反转一下
-        ReservedLst(lst[i]);
-    &#125;
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        Add<span class="token punctuation">(</span>lst<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+//这里假设对于 lst<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">;</span>相加后为： lst<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span>: 4<span class="token punctuation">;</span> lst<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span>:2<span class="token punctuation">;</span>没有变化这种情况
+//因为相加的时候是 以lst<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span>, lst<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span>为基准，所以这里向下相加后，就要反转一下
+        ReservedLst<span class="token punctuation">(</span>lst<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
     //重新赋值
-    for (int i = 0; i &lt; Count; i++)
-    &#123;
-        for (int j = 0; j &lt; Count; j++)
-        &#123;
-            m_nArray[i][j] = lst[j][i]; //注意这里是 lst[j][i] 赋值给 m_nArray[i][j]
-        &#125;
-    &#125;
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> lst<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> //注意这里是 lst<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> 赋值给 m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 
     //检测变动
-    for (int i = 0; i &lt; Count; i++)
-    &#123;
-        for (int j = 0; j &lt; Count; j++)
-        &#123;
-            if (m_nArray[i][j] != tempArray[i][j])
-            &#123;
-                return true;
-            &#125;
-        &#125;
-    &#125;
-    GetDlgItem(IDC_BUTTON4)-&gt;EnableWindow(FALSE);
-    return false;
-    &#125;return TRUE;
-&#125;
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> tempArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    GetDlgItem<span class="token punctuation">(</span>IDC_BUTTON4<span class="token punctuation">)</span>-<span class="token operator">></span>EnableWindow<span class="token punctuation">(</span>FALSE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;return TRUE;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id="5-游戏结束函数"><a href="#5-游戏结束函数" class="headerlink" title="5.游戏结束函数"></a>5.游戏结束函数</h3><pre><code>bool CMy2048Dlg::CalcEnd(void)
-&#123;
-    if (wop)
-    &#123;
+<h3 id="5-游戏结束函数"><a href="#5-游戏结束函数" class="headerlink" title="5.游戏结束函数"></a>5.游戏结束函数</h3><pre class=" language-bash"><code class="language-bash">bool CMy2048Dlg::CalcEnd<span class="token punctuation">(</span>void<span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>wop<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
         //首先处理横轴：
-        for (int i = 0; i &lt; Count; i++)
-        &#123;
-            for (int j = 0; j &lt; Count; j++)
-            &#123;
-                if (m_nArray[i][j] == 0)
-                &#123;
-                    return false;
-                &#125;
-                if (j + 1 == Count)
-                &#123;
-                    break;
-                &#125;
-                if (m_nArray[i][j] == m_nArray[i][j + 1])//判断是否可以累加
-                &#123;
-                    return false;
-                &#125;
-            &#125;
-        &#125;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> 0<span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>j + 1 <span class="token operator">==</span> Count<span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j + 1<span class="token punctuation">]</span><span class="token punctuation">)</span>//判断是否可以累加
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
         //处理纵轴
-        for (int i = 0; i &lt; Count; i++)
-        &#123;
-            for (int j = 0; j &lt; Count; j++)
-            &#123;
-                if (m_nArray[i][j] == 0)
-                &#123;
-                    return false;
-                &#125;
-                if (i + 1 == Count)
-                &#123;
-                    break;
-                &#125;
-                if (m_nArray[i][j] == m_nArray[i + 1][j])
-                &#123;
-                    return false;
-                &#125;
-            &#125;
-        &#125;
-        return true;
-    &#125;return false;
-&#125;
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> 0<span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>i + 1 <span class="token operator">==</span> Count<span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> m_nArray<span class="token punctuation">[</span>i + 1<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;return false;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="6-累加函数"><a href="#6-累加函数" class="headerlink" title="6.累加函数"></a>6.累加函数</h3><pre><code>void CMy2048Dlg::Add( deque&lt;int&gt; &amp;list)
-&#123;
-    if (wop)
-    &#123;
-        for (int i = 0; i &lt;int(list.size()); i++)
-        &#123;
-            if (list[i] == 0)
-                continue;
-            for (int j = i + 1; j &lt;int(list.size()); j++)
-            &#123;
-                if (list[i] == list[j])
-                &#123;
-                    list[i] *= 2;
-                    list[j] = 0;
-                    break;
-                &#125;
-//如果当前的值不为0  跳出内循环，没必要再比较例如：  4 2 2 ； 当 list[0]=4,list[1]=2list[1] = 2 != 0,直接跳出循环，没必要再比较 list[2]与 list[0]
-                if (list[j] != 0)
-                &#123;
-                    break;
-                &#125;
-            &#125;
-        &#125;
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="6-累加函数"><a href="#6-累加函数" class="headerlink" title="6.累加函数"></a>6.累加函数</h3><pre class=" language-bash"><code class="language-bash">void CMy2048Dlg::Add<span class="token punctuation">(</span> deque<span class="token operator">&lt;</span>int<span class="token operator">></span> <span class="token operator">&amp;</span>list<span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>wop<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span>int<span class="token punctuation">(</span>list.size<span class="token punctuation">(</span><span class="token punctuation">))</span><span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> 0<span class="token punctuation">)</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> i + 1<span class="token punctuation">;</span> j <span class="token operator">&lt;</span>int<span class="token punctuation">(</span>list.size<span class="token punctuation">(</span><span class="token punctuation">))</span><span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> list<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> *<span class="token operator">=</span> 2<span class="token punctuation">;</span>
+                    list<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+//如果当前的值不为0  跳出内循环，没必要再比较例如：  4 2 2 ； 当 list<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token operator">=</span>4,list<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token operator">=</span>2list<span class="token punctuation">[</span>1<span class="token punctuation">]</span> <span class="token operator">=</span> 2 <span class="token operator">!=</span> 0,直接跳出循环，没必要再比较 list<span class="token punctuation">[</span>2<span class="token punctuation">]</span>与 list<span class="token punctuation">[</span>0<span class="token punctuation">]</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>list<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> 0<span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
         //重新排列顺序，不足补0；
         //例如 4 2  经过上面的代码其实没有任何变化累加，但是累加最后的结果要变为  4 2 0 0  
-        deque&lt;int&gt; tempLst;
-        for (int i = 0; i &lt;int(list.size()); i++)
-        &#123;
+        deque<span class="token operator">&lt;</span>int<span class="token operator">></span> tempLst<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span>int<span class="token punctuation">(</span>list.size<span class="token punctuation">(</span><span class="token punctuation">))</span><span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
             //双端队列支持对元素的下标访问
-            if (list[i] != 0)
-            &#123;
-                tempLst.push_back(list[i]);
-            &#125;
-        &#125;
-        list = tempLst; //这个时候 list的元素为： 4 2 ，所以下面要补0
-        for (int i = list.size(); i &lt; Count; i++)
-        &#123;
-            list.push_back(0); //list 的元素为： 4 2 0 0 
-        &#125;
-    &#125;
-&#125;
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> 0<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                tempLst.push_back<span class="token punctuation">(</span>list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        list <span class="token operator">=</span> tempLst<span class="token punctuation">;</span> //这个时候 list的元素为： 4 2 ，所以下面要补0
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> list.size<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            list.push_back<span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span> //list 的元素为： 4 2 0 0 
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id="7-向上按钮响应函数"><a href="#7-向上按钮响应函数" class="headerlink" title="7.向上按钮响应函数"></a>7.向上按钮响应函数</h3><pre><code>void CMy2048Dlg::OnBnClickedButton2()
-&#123;
+<h3 id="7-向上按钮响应函数"><a href="#7-向上按钮响应函数" class="headerlink" title="7.向上按钮响应函数"></a>7.向上按钮响应函数</h3><pre class=" language-bash"><code class="language-bash">void CMy2048Dlg::OnBnClickedButton2<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
     // TODO: 在此添加控件通知处理程序代码
-    //sign = 1;
-    CString str;
-    bool bRet;
-    if (wop)
-    &#123;
-        List1.AddString(_T(&quot;↑&quot;));
-        CString strr;
-        strr = TravelArrey();
-        WriteTXT(strr);
-        bRet = Up();
-        TOPControl(bRet);
-    &#125;
-&#125;
+    //sign <span class="token operator">=</span> 1<span class="token punctuation">;</span>
+    CString str<span class="token punctuation">;</span>
+    bool bRet<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>wop<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        List1.AddString<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"↑"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+        CString strr<span class="token punctuation">;</span>
+        strr <span class="token operator">=</span> TravelArrey<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        WriteTXT<span class="token punctuation">(</span>strr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bRet <span class="token operator">=</span> Up<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        TOPControl<span class="token punctuation">(</span>bRet<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id="8-TOPControl函数"><a href="#8-TOPControl函数" class="headerlink" title="8.TOPControl函数"></a>8.TOPControl函数</h3><pre><code>void CMy2048Dlg::TOPControl(bool n)
-&#123;
-    if (CalcEnd())//判断游戏是否结束
-    &#123;
-    AfxMessageBox(_T(&quot;GameOver!&quot;));List1.AddString(_T(&quot;GameOver!&quot;));
-                //List1.AddString(_T(&quot;GameOver!&quot;));
-        int buff[4][4];
-        int max = 0;
-        for (int i = 0; i &lt; 4; i++)//遍历找出最大值并输出
-            for (int j = 0; j &lt; 4; j++)
-            &#123;
-                buff[i][j] = m_nArray[i][j];
-                if (buff[i][j] &gt; max)
-                    max = buff[i][j];
-            &#125;
-        CString st;
-        st.Format(_T(&quot;m_%d\n&quot;), max);
-        WriteNameTXT(st);//记录游戏信息
-        CString strrr;
-        strrr.Format(_T(&quot;O_%s\n&quot;), Userr.name);
-        WriteTXT(strrr);
-        Reset();//重置游戏
-        TOPList();//排行榜函数
-    &#125;
-    else
-    &#123;
-        if (n)
-        &#123;
-            RandonNum();
-            Invalidate(TRUE);
-            if (CalcEnd())
-            &#123;                AfxMessageBox(_T(&quot;GameOver!&quot;));List1.AddString(_T(&quot;GameOver!&quot;));
-                int buff[4][4];
-                int max = 0;
-                for (int i = 0; i &lt; 4; i++)//遍历找出最大值并输出
-                    for (int j = 0; j &lt; 4; j++)
-                    &#123;
-                        buff[i][j] = m_nArray[i][j];
-                        if (buff[i][j] &gt; max)
-                            max = buff[i][j];
-                    &#125;
-                CString st;
-                st.Format(_T(&quot;m_%d\n&quot;), max);
-                WriteNameTXT(st);
-                CString strrr;
-                strrr.Format(_T(&quot;O_%s\n&quot;), Userr.name);
-                WriteTXT(strrr);
-                Reset();
-                TOPList();
-            &#125;
-        &#125;
-    &#125;
-    Invalidate(TRUE);
-&#125;
+<h3 id="8-TOPControl函数"><a href="#8-TOPControl函数" class="headerlink" title="8.TOPControl函数"></a>8.TOPControl函数</h3><pre class=" language-bash"><code class="language-bash">void CMy2048Dlg::TOPControl<span class="token punctuation">(</span>bool n<span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>CalcEnd<span class="token punctuation">(</span><span class="token punctuation">))</span>//判断游戏是否结束
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    AfxMessageBox<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"GameOver!"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>List1.AddString<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"GameOver!"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+                //List1.AddString<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"GameOver!"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+        int buff<span class="token punctuation">[</span>4<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        int max <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> 4<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>//遍历找出最大值并输出
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> 4<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                buff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>buff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> max<span class="token punctuation">)</span>
+                    max <span class="token operator">=</span> buff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        CString st<span class="token punctuation">;</span>
+        st.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"m_%d\n"</span><span class="token punctuation">)</span>, max<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        WriteNameTXT<span class="token punctuation">(</span>st<span class="token punctuation">)</span><span class="token punctuation">;</span>//记录游戏信息
+        CString strrr<span class="token punctuation">;</span>
+        strrr.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"O_%s\n"</span><span class="token punctuation">)</span>, Userr.name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        WriteTXT<span class="token punctuation">(</span>strrr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Reset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//重置游戏
+        TOPList<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//排行榜函数
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token keyword">else</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            RandonNum<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Invalidate<span class="token punctuation">(</span>TRUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>CalcEnd<span class="token punctuation">(</span><span class="token punctuation">))</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;                AfxMessageBox(_T("GameOver!"));List1.AddString(_T("GameOver!"));</span>
+                int buff<span class="token punctuation">[</span>4<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                int max <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> 4<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>//遍历找出最大值并输出
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> 4<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+                    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                        buff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>buff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> max<span class="token punctuation">)</span>
+                            max <span class="token operator">=</span> buff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                CString st<span class="token punctuation">;</span>
+                st.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"m_%d\n"</span><span class="token punctuation">)</span>, max<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                WriteNameTXT<span class="token punctuation">(</span>st<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                CString strrr<span class="token punctuation">;</span>
+                strrr.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"O_%s\n"</span><span class="token punctuation">)</span>, Userr.name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                WriteTXT<span class="token punctuation">(</span>strrr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                Reset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                TOPList<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    Invalidate<span class="token punctuation">(</span>TRUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id="9-定时器相关函数"><a href="#9-定时器相关函数" class="headerlink" title="9.定时器相关函数"></a>9.定时器相关函数</h3><pre><code>void CMy2048Dlg::OnTimer(UINT_PTR nIDEvent)
-&#123;
-    if(nIDEvent==1&amp;&amp;wop)//判断事件来自哪个定时器
-    &#123;
+<h3 id="9-定时器相关函数"><a href="#9-定时器相关函数" class="headerlink" title="9.定时器相关函数"></a>9.定时器相关函数</h3><pre class=" language-bash"><code class="language-bash">void CMy2048Dlg::OnTimer<span class="token punctuation">(</span>UINT_PTR nIDEvent<span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    if<span class="token punctuation">(</span>nIDEvent<span class="token operator">==</span>1<span class="token operator">&amp;&amp;</span>wop<span class="token punctuation">)</span>//判断事件来自哪个定时器
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
         // TODO: 在此添加消息处理程序代码和/或调用默认值
-        //sign2 = 0;
-        CString str, str1, str2, str3;
-        int Minute, Second; //分，秒
-        Minute = ct / 60; //分
-        Second = ct % 60;  //秒
-        if (Second == 0)
-        &#123;
-            Second = 59;
-            if (Minute &gt; 0)
-                Minute = Minute - 1;
-        &#125;
-        else
-        &#123;
-            Second = Second - 1;//自减1倒计时
-        &#125;
-        if (Second &gt;= 10)
-            str2.Format(_T(&quot;%d:%d&quot;), Minute, Second);
-        else
-            str2.Format(_T(&quot;%d:0%d&quot;), Minute, Second);
-        //str2.Format(_T(&quot;%d&quot;), Second);
-        SetDlgItemText(IDC_EDIT2, str2);
-        if (Minute == 0 &amp;&amp; Second == 0&amp;&amp;sign2==0)
-        &#123;
-            sign2++;
-            //AfxMessageBox(_T(&quot;GameOver!&quot;));
-            if (MessageBox(_T(&quot;Game Over!&quot;), _T(&quot;时间到&quot;))== 1)
-            &#123;
-                sign2 = 0;
-                List1.AddString(_T(&quot;GameOver!&quot;));
+        //sign2 <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+        CString str, str1, str2, str3<span class="token punctuation">;</span>
+        int Minute, Second<span class="token punctuation">;</span> //分，秒
+        Minute <span class="token operator">=</span> ct / 60<span class="token punctuation">;</span> //分
+        Second <span class="token operator">=</span> ct % 60<span class="token punctuation">;</span>  //秒
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Second <span class="token operator">==</span> 0<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            Second <span class="token operator">=</span> 59<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>Minute <span class="token operator">></span> 0<span class="token punctuation">)</span>
+                Minute <span class="token operator">=</span> Minute - 1<span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token keyword">else</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            Second <span class="token operator">=</span> Second - 1<span class="token punctuation">;</span>//自减1倒计时
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Second <span class="token operator">>=</span> 10<span class="token punctuation">)</span>
+            str2.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"%d:%d"</span><span class="token punctuation">)</span>, Minute, Second<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            str2.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"%d:0%d"</span><span class="token punctuation">)</span>, Minute, Second<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        //str2.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">)</span>, Second<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT2, str2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Minute <span class="token operator">==</span> 0 <span class="token operator">&amp;&amp;</span> Second <span class="token operator">==</span> 0<span class="token operator">&amp;&amp;</span>sign2<span class="token operator">==</span>0<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            sign2++<span class="token punctuation">;</span>
+            //AfxMessageBox<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"GameOver!"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>MessageBox<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"Game Over!"</span><span class="token punctuation">)</span>, _T<span class="token punctuation">(</span><span class="token string">"时间到"</span><span class="token punctuation">))</span><span class="token operator">==</span> 1<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                sign2 <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+                List1.AddString<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"GameOver!"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
                 
-                int buff[4][4];
-                int max = 0;
-                for (int i = 0; i &lt; 4; i++)//遍历找出最大值并输出
-                    for (int j = 0; j &lt; 4; j++)
-                    &#123;
-                        buff[i][j] = m_nArray[i][j];
-                        if (buff[i][j] &gt; max)
-                            max = buff[i][j];
-                    &#125;
-                CString st;
-                st.Format(_T(&quot;m_%d\n&quot;), max);
-                WriteNameTXT(st);
-                Invalidate(TRUE);
-                CString strrr;
-                strrr.Format(_T(&quot;O_%s\n&quot;), Userr.name);
-                WriteTXT(strrr);
-                Reset();//此处修改只显示一次
+                int buff<span class="token punctuation">[</span>4<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                int max <span class="token operator">=</span> 0<span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> 4<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>//遍历找出最大值并输出
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> 4<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+                    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                        buff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> m_nArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>buff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> max<span class="token punctuation">)</span>
+                            max <span class="token operator">=</span> buff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                CString st<span class="token punctuation">;</span>
+                st.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"m_%d\n"</span><span class="token punctuation">)</span>, max<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                WriteNameTXT<span class="token punctuation">(</span>st<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                Invalidate<span class="token punctuation">(</span>TRUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                CString strrr<span class="token punctuation">;</span>
+                strrr.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"O_%s\n"</span><span class="token punctuation">)</span>, Userr.name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                WriteTXT<span class="token punctuation">(</span>strrr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                Reset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//此处修改只显示一次
                 
-                TOPList();
-            &#125;        
-        &#125;
-        else if (Minute == 0 &amp;&amp; Second == 0 &amp;&amp; sign2 != 0)
-        &#123;
-            sign2++;
-            ct = COUNT;
-        &#125;
-        ct = ct - 1;
+                TOPList<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;        </span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>Minute <span class="token operator">==</span> 0 <span class="token operator">&amp;&amp;</span> Second <span class="token operator">==</span> 0 <span class="token operator">&amp;&amp;</span> sign2 <span class="token operator">!=</span> 0<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            sign2++<span class="token punctuation">;</span>
+            ct <span class="token operator">=</span> COUNT<span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        ct <span class="token operator">=</span> ct - 1<span class="token punctuation">;</span>
 
-        CTime tm = CTime::GetCurrentTime();
-        str3.Format(_T(&quot;%d-%02d-%02d  %02d:%02d:%02d&quot;), tm.GetYear(), tm.GetMonth(), tm.GetDay(), tm.GetHour(), tm.GetMinute(), tm.GetSecond());
-        GetDlgItem(IDC_EDIT1)-&gt;EnableWindow(FALSE);
-        GetDlgItem(IDC_EDIT1)-&gt;SetWindowText(str3);
-    &#125;
-    else if (nIDEvent == 2)
-    &#123;
-        CString str;
-        if (sign == 10) sign = 1;
-        else sign++;
-        switch (sign)//选择要显示的名人名言
-        &#123;
-        case 1:
-            str = word1;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        case 2:
-            str = word2;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        case 3:
-            str = word3;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        case 4:
-            str = word4;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        case 5:
-            str = word5;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        case 6:
-            str = word6;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        case 7:
-            str = word7;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        case 8:
-            str = word8;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        case 9:
-            str = word9;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        case 10:
-            str = word10;
-            SetDlgItemText(IDC_EDIT3, str);
-            break;
-        &#125;
-    &#125;
-    CDialogEx::OnTimer(nIDEvent);
-&#125;
+        CTime tm <span class="token operator">=</span> CTime::GetCurrentTime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        str3.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"%d-%02d-%02d  %02d:%02d:%02d"</span><span class="token punctuation">)</span>, tm.GetYear<span class="token punctuation">(</span><span class="token punctuation">)</span>, tm.GetMonth<span class="token punctuation">(</span><span class="token punctuation">)</span>, tm.GetDay<span class="token punctuation">(</span><span class="token punctuation">)</span>, tm.GetHour<span class="token punctuation">(</span><span class="token punctuation">)</span>, tm.GetMinute<span class="token punctuation">(</span><span class="token punctuation">)</span>, tm.GetSecond<span class="token punctuation">(</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+        GetDlgItem<span class="token punctuation">(</span>IDC_EDIT1<span class="token punctuation">)</span>-<span class="token operator">></span>EnableWindow<span class="token punctuation">(</span>FALSE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        GetDlgItem<span class="token punctuation">(</span>IDC_EDIT1<span class="token punctuation">)</span>-<span class="token operator">></span>SetWindowText<span class="token punctuation">(</span>str3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nIDEvent <span class="token operator">==</span> 2<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        CString str<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>sign <span class="token operator">==</span> 10<span class="token punctuation">)</span> sign <span class="token operator">=</span> 1<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> sign++<span class="token punctuation">;</span>
+        switch <span class="token punctuation">(</span>sign<span class="token punctuation">)</span>//选择要显示的名人名言
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">case</span> 1:
+            str <span class="token operator">=</span> word1<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> 2:
+            str <span class="token operator">=</span> word2<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> 3:
+            str <span class="token operator">=</span> word3<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> 4:
+            str <span class="token operator">=</span> word4<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> 5:
+            str <span class="token operator">=</span> word5<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> 6:
+            str <span class="token operator">=</span> word6<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> 7:
+            str <span class="token operator">=</span> word7<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> 8:
+            str <span class="token operator">=</span> word8<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> 9:
+            str <span class="token operator">=</span> word9<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> 10:
+            str <span class="token operator">=</span> word10<span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT3, str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    CDialogEx::OnTimer<span class="token punctuation">(</span>nIDEvent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id="10-排行榜函数"><a href="#10-排行榜函数" class="headerlink" title="10.排行榜函数"></a>10.排行榜函数</h3><pre><code>void CMy2048Dlg::TOPList()
-&#123;
-    CString cstrFileFullPath = _T(&quot;C:\\Users\\11817\\Desktop\\计算机大实验\\2048demo\\name.txt&quot;);
-    USES_CONVERSION;
-    CStdioFile cssFile;
-    CString cstrLine;
-    //usr *u = new usr;
-    u.RemoveAll();
-    int z=0;
-    BOOL ret = cssFile.Open(cstrFileFullPath,
-        CFile::modeRead | CFile::shareDenyNone);
-    if (!ret)
-    &#123;
-        AfxMessageBox(_T(&quot;读取文件失败&quot;));
-        return;
-    &#125;
-    cssFile.SeekToBegin();
-    while (cssFile.ReadString(cstrLine))
-    &#123;
+<h3 id="10-排行榜函数"><a href="#10-排行榜函数" class="headerlink" title="10.排行榜函数"></a>10.排行榜函数</h3><pre class=" language-bash"><code class="language-bash">void CMy2048Dlg::TOPList<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    CString cstrFileFullPath <span class="token operator">=</span> _T<span class="token punctuation">(</span><span class="token string">"C:\\Users\\11817\\Desktop\\计算机大实验\\2048demo\\name.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    USES_CONVERSION<span class="token punctuation">;</span>
+    CStdioFile cssFile<span class="token punctuation">;</span>
+    CString cstrLine<span class="token punctuation">;</span>
+    //usr *u <span class="token operator">=</span> new usr<span class="token punctuation">;</span>
+    u.RemoveAll<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    int z<span class="token operator">=</span>0<span class="token punctuation">;</span>
+    BOOL ret <span class="token operator">=</span> cssFile.Open<span class="token punctuation">(</span>cstrFileFullPath,
+        CFile::modeRead <span class="token operator">|</span> CFile::shareDenyNone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>ret<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        AfxMessageBox<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"读取文件失败"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    cssFile.SeekToBegin<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>cssFile.ReadString<span class="token punctuation">(</span>cstrLine<span class="token punctuation">))</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
         
-        //z++;
-        if (cstrLine==&quot;u_&quot;)
-        &#123;
-            continue;
-        &#125;
-        else if (cstrLine != &quot;u_&quot; &amp;&amp; cstrLine.GetAt(0)==&#39;u&#39;)
+        //z++<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cstrLine<span class="token operator">==</span><span class="token string">"u_"</span><span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>cstrLine <span class="token operator">!=</span> <span class="token string">"u_"</span> <span class="token operator">&amp;&amp;</span> cstrLine.GetAt<span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token operator">==</span><span class="token string">'u'</span><span class="token punctuation">)</span>
 //查找用户名关键字
-        &#123;
-            usr temp;
-            int l=cstrLine.GetLength();
-            CString ste= cstrLine.Right(l-2);
-            //ste.Format(_T(&quot;%s&quot;),)
-            temp.name = ste;
-            temp.order = z+1;
-            u.Add(temp);
-            //u = new usr;
-            //u[z].name = cstrLine;
-            z++;
-            //countt++;
-        &#125;
-        else if (cstrLine != &quot;u_&quot; &amp;&amp;cstrLine.GetAt(0) == &#39;m&#39;)//查找成绩关键字
-        &#123;
-            int i,k,l;
-            char s[4] = &#123;0&#125;;
-            l = cstrLine.GetLength();
-            for (i = 0; i&lt;l-2; i++)
-            &#123;
-                char y;
-                 y= cstrLine.GetAt(i + 2);
-                 s[i] = y;
-            &#125;
-            //s.Add( &#39;\0&#39;);             
-            k = atoi(s);
-            u[z-1].MAX = k;    
-        &#125;
-    &#125;
-    usr max;
-    int tempmax = z - 1;//交换排序
-    for (int i = 0; i &lt;z; i++)
-    &#123;
-        for (int j = z-1; j &gt;0; j--)
-        &#123;
-            if (u[i].MAX &lt;= u[j].MAX)
-            &#123;
-                max = u[i];
-                u[i] = u[j];
-                u[j] = max;
-            &#125;
-        &#125;
-    &#125;
-    List2.ResetContent();
-    TOPu.RemoveAll();//清空排序记录
-    for (int i=0,v=0; i&lt;z-1&amp;&amp;v&lt;20;i++ )
-    &#123;
-        CString str,str2;
-        str2.Format(_T(&quot;|分数：&quot;));
-        if (u[i].MAX != 0)
-        &#123;
-            usr temp;
-            if (v &lt; 15)
-            &#123;
-                str.Format(_T(&quot;第%d名：%-8s%s%-4d&quot;), v + 1, u[i].name, str2, u[i].MAX);
-                List2.AddString(str);//输出至列表
-            &#125;
-            temp = u[i];
-            TOPu.Add(temp);
-            v++;
-        &#125;
-    &#125;
-&#125;
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            usr temp<span class="token punctuation">;</span>
+            int l<span class="token operator">=</span>cstrLine.GetLength<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            CString ste<span class="token operator">=</span> cstrLine.Right<span class="token punctuation">(</span>l-2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            //ste.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">)</span>,<span class="token punctuation">)</span>
+            temp.name <span class="token operator">=</span> ste<span class="token punctuation">;</span>
+            temp.order <span class="token operator">=</span> z+1<span class="token punctuation">;</span>
+            u.Add<span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            //u <span class="token operator">=</span> new usr<span class="token punctuation">;</span>
+            //u<span class="token punctuation">[</span>z<span class="token punctuation">]</span>.name <span class="token operator">=</span> cstrLine<span class="token punctuation">;</span>
+            z++<span class="token punctuation">;</span>
+            //countt++<span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>cstrLine <span class="token operator">!=</span> <span class="token string">"u_"</span> <span class="token operator">&amp;&amp;</span>cstrLine.GetAt<span class="token punctuation">(</span>0<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'m'</span><span class="token punctuation">)</span>//查找成绩关键字
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            int i,k,l<span class="token punctuation">;</span>
+            char s<span class="token punctuation">[</span>4<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;0&amp;#125;;</span>
+            l <span class="token operator">=</span> cstrLine.GetLength<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i<span class="token operator">&lt;</span>l-2<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                char y<span class="token punctuation">;</span>
+                 y<span class="token operator">=</span> cstrLine.GetAt<span class="token punctuation">(</span>i + 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> y<span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+            //s.Add<span class="token punctuation">(</span> <span class="token string">'\0'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             
+            k <span class="token operator">=</span> atoi<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            u<span class="token punctuation">[</span>z-1<span class="token punctuation">]</span>.MAX <span class="token operator">=</span> k<span class="token punctuation">;</span>    
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    usr max<span class="token punctuation">;</span>
+    int tempmax <span class="token operator">=</span> z - 1<span class="token punctuation">;</span>//交换排序
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span>z<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> z-1<span class="token punctuation">;</span> j <span class="token operator">></span>0<span class="token punctuation">;</span> j--<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>u<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.MAX <span class="token operator">&lt;=</span> u<span class="token punctuation">[</span>j<span class="token punctuation">]</span>.MAX<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                max <span class="token operator">=</span> u<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                u<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> u<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                u<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> max<span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    List2.ResetContent<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TOPu.RemoveAll<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//清空排序记录
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int i<span class="token operator">=</span>0,v<span class="token operator">=</span>0<span class="token punctuation">;</span> i<span class="token operator">&lt;</span>z-1<span class="token operator">&amp;&amp;</span>v<span class="token operator">&lt;</span>20<span class="token punctuation">;</span>i++ <span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        CString str,str2<span class="token punctuation">;</span>
+        str2.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"|分数："</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>u<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.MAX <span class="token operator">!=</span> 0<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            usr temp<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>v <span class="token operator">&lt;</span> 15<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                str.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"第%d名：%-8s%s%-4d"</span><span class="token punctuation">)</span>, <span class="token function">v</span> + 1, u<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.name, str2, u<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.MAX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                List2.AddString<span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>//输出至列表
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+            temp <span class="token operator">=</span> u<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            TOPu.Add<span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            v++<span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
-<h3 id="11-回放函数"><a href="#11-回放函数" class="headerlink" title="11.回放函数"></a>11.回放函数</h3><pre><code>void CMy2048Dlg::watch(int x,int s)
-&#123;
-    //TOPu[x];
-    CPaintDC dc(this);
-    int y=0;
-    CString cstrFileFullPath = _T(&quot;C:\\Users\\11817\\Desktop\\计算机大实验\\2048demo\\data.txt&quot;);
-    USES_CONVERSION;
-    CStdioFile cssFile;
-    CString cstrLine;
-    BOOL ret = cssFile.Open(cstrFileFullPath,
-        CFile::modeRead | CFile::shareDenyNone);
-    if (!ret)
-    &#123;
-        AfxMessageBox(_T(&quot;读取文件失败&quot;));
-        return;
-    &#125;
-    cssFile.SeekToBegin();
-    while (cssFile.ReadString(cstrLine))
-    &#123;
-        int u=0;
-        if (cstrLine.GetAt(0) == &#39;L&#39;)
-            y++;
-        if (y == TOPu[x].order)
-        &#123;
-            u = 1;
-            /*CString stt;
-            stt.Format(_T(&quot;%s&quot;), TOPu[x].name);
-            SetDlgItemText(IDC_EDIT4, stt);*/
-            for (int i = 0;  ; i++)
-            &#123;
-                if (cssFile.ReadString(cstrLine) &amp;&amp; cstrLine.GetAt(0) != &#39;O&#39;&amp;&amp;cstrLine.GetAt(0) != &#39;L&#39;)
-                &#123;
-                    for (int j = 0; j &lt; Count; j++)
-                        for (int h = 0; h &lt; Count; h++)
-                        &#123;
-                            CString temp; char *temps;
-                            temp = cstrLine.Mid(25 * j + 5 * h, 25 * j + 5 * (h + 1));
-                            temps = W2A(temp.GetBuffer());
-                            int m=atoi(temps);
-                            n_nArray[j][h] = m;
-                        &#125;
-                    Invalidate();
-                    XSleep(s);//延时300ms
-                    //List1.AddString(_T(&quot;*&quot;));
-                &#125;
-                else
-                    break;
-            &#125;
-        &#125;
-        if(u)
-            break;
-    &#125;
-    wop = TRUE;
-&#125;
+<h3 id="11-回放函数"><a href="#11-回放函数" class="headerlink" title="11.回放函数"></a>11.回放函数</h3><pre class=" language-bash"><code class="language-bash">void CMy2048Dlg::watch<span class="token punctuation">(</span>int x,int s<span class="token punctuation">)</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    //TOPu<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    CPaintDC dc<span class="token punctuation">(</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    int y<span class="token operator">=</span>0<span class="token punctuation">;</span>
+    CString cstrFileFullPath <span class="token operator">=</span> _T<span class="token punctuation">(</span><span class="token string">"C:\\Users\\11817\\Desktop\\计算机大实验\\2048demo\\data.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    USES_CONVERSION<span class="token punctuation">;</span>
+    CStdioFile cssFile<span class="token punctuation">;</span>
+    CString cstrLine<span class="token punctuation">;</span>
+    BOOL ret <span class="token operator">=</span> cssFile.Open<span class="token punctuation">(</span>cstrFileFullPath,
+        CFile::modeRead <span class="token operator">|</span> CFile::shareDenyNone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>ret<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        AfxMessageBox<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"读取文件失败"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    cssFile.SeekToBegin<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>cssFile.ReadString<span class="token punctuation">(</span>cstrLine<span class="token punctuation">))</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        int u<span class="token operator">=</span>0<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cstrLine.GetAt<span class="token punctuation">(</span>0<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'L'</span><span class="token punctuation">)</span>
+            y++<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>y <span class="token operator">==</span> TOPu<span class="token punctuation">[</span>x<span class="token punctuation">]</span>.order<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            u <span class="token operator">=</span> 1<span class="token punctuation">;</span>
+            /*CString stt<span class="token punctuation">;</span>
+            stt.Format<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">)</span>, TOPu<span class="token punctuation">[</span>x<span class="token punctuation">]</span>.name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            SetDlgItemText<span class="token punctuation">(</span>IDC_EDIT4, stt<span class="token punctuation">)</span><span class="token punctuation">;</span>*/
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> 0<span class="token punctuation">;</span>  <span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>cssFile.ReadString<span class="token punctuation">(</span>cstrLine<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> cstrLine.GetAt<span class="token punctuation">(</span>0<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'O'</span><span class="token operator">&amp;&amp;</span>cstrLine.GetAt<span class="token punctuation">(</span>0<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'L'</span><span class="token punctuation">)</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> 0<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> j++<span class="token punctuation">)</span>
+                        <span class="token keyword">for</span> <span class="token punctuation">(</span>int h <span class="token operator">=</span> 0<span class="token punctuation">;</span> h <span class="token operator">&lt;</span> Count<span class="token punctuation">;</span> h++<span class="token punctuation">)</span>
+                        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                            CString temp<span class="token punctuation">;</span> char *temps<span class="token punctuation">;</span>
+                            temp <span class="token operator">=</span> cstrLine.Mid<span class="token punctuation">(</span>25 * j + 5 * h, 25 * j + 5 * <span class="token punctuation">(</span>h + 1<span class="token punctuation">))</span><span class="token punctuation">;</span>
+                            temps <span class="token operator">=</span> W2A<span class="token punctuation">(</span>temp.GetBuffer<span class="token punctuation">(</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+                            int m<span class="token operator">=</span>atoi<span class="token punctuation">(</span>temps<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            n_nArray<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>h<span class="token punctuation">]</span> <span class="token operator">=</span> m<span class="token punctuation">;</span>
+                        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                    Invalidate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    XSleep<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>//延时300ms
+                    //List1.AddString<span class="token punctuation">(</span>_T<span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+                <span class="token keyword">else</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        if<span class="token punctuation">(</span>u<span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    wop <span class="token operator">=</span> TRUE<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
 
                 
