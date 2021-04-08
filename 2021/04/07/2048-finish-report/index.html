@@ -487,7 +487,7 @@
 <h4 id="1-2-功能需求"><a href="#1-2-功能需求" class="headerlink" title="1.2 功能需求"></a>1.2 功能需求</h4><p>（1）用户登录：打开游戏程序后，用户在用户名输入框输入用户名即可进入游戏。<br>（2）开始游戏：游戏界面左上角显示游戏倒计时，用户应在倒计时结束前使游戏面盘内的数字尽可能大。用户可以通过鼠标点击界面的四个方向按钮或者键盘的上下左右键进行操作。当倒计时间到或者游戏无法继续进行时，将弹出“Game Over!”提示信息。<br>（3）退出登录：当用户想要切换登录账户或者退出游戏时，可以点击界面右下角的“退出登陆”按键，游戏将返回登陆界面，同时正在进行的游戏将中断。<br>（4）排行榜：游戏界面右侧文本框显示游戏玩家实时排名。若用户需要刷新排名，可点击右上角“刷新”按键。<br>（5）回放按键：若用户需要回访排行榜内玩家游戏过程，可先在右下角下拉文本框内选择要观看的玩家排名，后点击“观看”按键。之后玩家在弹出的对话框内选择倍速播放的速度，游戏面盘内会按照设定倍速演示游戏过程。演示结束后，游戏面盘会重置，回到游戏。</p>
 <p>（6）其他功能：<br>    当前时间显示：游戏界面左下角显示当前日期和时间，方便用户管理游戏时间；<br>    名人名言：游戏界面中下部滚动显示名人名言，在游戏过程中增添了文化氛围；<br>    背景音乐：游戏运行过程中会有舒缓的轻音乐作为背景音乐，使用户在游戏过程中保持平静和放松的心情；<br>    操作记录：游戏界面中部文本框内显示用户登录信息和实时操作，方便用户查看与记录。</p>
 <h4 id="1-3-假定和约束"><a href="#1-3-假定和约束" class="headerlink" title="1.3 假定和约束"></a>1.3 假定和约束</h4><p>（1）假定用户在输入用户名等信息后，不使用Enter健输入，而是点击确定按钮。并且假定用户在整个游戏过程中不使用Enter键。因为当用户按下Enter键时，Windows就会自动去找输入焦点落在了哪一个按钮上，当获得焦点的按钮的四周将被点线矩形包围。如果所有按钮都没有获得输入焦点，Windows就会自动去寻找程序或资源所指定的默认按钮(默认按钮边框较粗)。如果对话框没有默认按钮，那么即使对话框中没有OK按钮，OnOK函数也会自动被调用。在本游戏中，OnOK函数内并没有响应，如果用户按下Enter，会导致游戏直接关闭。<br>（2）假定用户在观看回放的过程中，不进行其它操作。因为在程序中，当开始观看时，其它功能会被锁定，无法正常运行。<br>（3）假定用户在使用过程中，不会修改游戏的数据文件。因为游戏中的排名信息以及操作数据是读取自这些数据文件。</p>
-<h3 id="2-结构设计"><a href="#2-结构设计" class="headerlink" title="2.结构设计"></a>2.结构设计</h3><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407205829752.png" alt="image-20210407205829752"></p>
+<h3 id="2-结构设计"><a href="#2-结构设计" class="headerlink" title="2.结构设计"></a>2.结构设计</h3><p><img src="https://i.loli.net/2021/04/08/bKLTdWiwyZGONl1.png" alt="image-20210407205829752"></p>
 <p>表1：各模块名称及其作用</p>
 <table>
 <thead>
@@ -537,129 +537,129 @@
 <td>用于切换用户或结束游戏</td>
 </tr>
 </tbody></table>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210510889.png" alt="image-20210407210510889"></p>
+<p><img src="https://i.loli.net/2021/04/08/5s4VSuyr1LWtRap.png" alt="image-20210407210510889"></p>
 <h3 id="3-详细设计"><a href="#3-详细设计" class="headerlink" title="3.详细设计"></a>3.详细设计</h3><h4 id="3-1-工程建立"><a href="#3-1-工程建立" class="headerlink" title="3.1 工程建立"></a>3.1 工程建立</h4><ol>
 <li><p>打开Visual Studio2017，点击文件——新建——项目；</p>
 </li>
 <li><p>新建MFC应用；</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210621548.png" alt="image-20210407210621548"></p>
+<p><img src="https://i.loli.net/2021/04/08/DWvTdVbfpO6FgU3.png" alt="image-20210407210621548"></p>
 </li>
 </ol>
 <p>图3：新建项目界面<br>3. 选择“基于对话框”；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210631868.png" alt="image-20210407210631868"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/DWvTdVbfpO6FgU3.png" alt="image-20210407210631868"></p>
 <p>图4：应用程序类型选项界面</p>
 <ol start="4">
 <li>   点击“完成”即可建立工程。</li>
 </ol>
 <h4 id="3-2-界面设计"><a href="#3-2-界面设计" class="headerlink" title="3.2 界面设计"></a>3.2 界面设计</h4><ol>
 <li><p>打开创建的工程文件，选择资源视图，打开对话框界面；</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210722995.png" alt="image-20210407210722995"></p>
+<p><img src="https://i.loli.net/2021/04/08/BGkvWVIdjf8zyUL.png" alt="image-20210407210722995"></p>
 </li>
 </ol>
 <p>图5：对话框初始界面<br>2. 将所需的控件拖入对话框并放置在合适的位置；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210731733.png" alt="image-20210407210731733"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/dBIDxlGZcFNbhU8.png" alt="image-20210407210731733"></p>
 <p>图6：完成后的对话框界面<br>3. 再次打开资源视图，创建新的对话框界面为欢迎界面</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210739776.png" alt="image-20210407210739776"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/FiwdkT4QJ8RhVP5.png" alt="image-20210407210739776"></p>
 <p>图7：新建对话框界面操作<br>4. 向新建的对话框界面添加控件</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210748103.png" alt="image-20210407210748103"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/GL3yWtVzUrRl21F.png" alt="image-20210407210748103"></p>
 <p>图8：完成后的欢迎界面<br>5. 最后，通过On_Paint 函数对窗口进一步美化，配置字体.背景.窗口大小等，并绘制游戏面盘；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210759280.png" alt="image-20210407210759280"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/cOheL3U5Yv6KDr7.png" alt="image-20210407210759280"></p>
 <p>图9：OnPaint函数部分代码</p>
 <h4 id="3-3-用户名输入模块设计"><a href="#3-3-用户名输入模块设计" class="headerlink" title="3.3 用户名输入模块设计"></a>3.3 用户名输入模块设计</h4><ol>
 <li><p>从“资源视图”打开欢迎界面，放置用于用户输入的文本框；</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210822757.png" alt="image-20210407210822757"></p>
+<p><img src="https://i.loli.net/2021/04/08/YKgPfyoEwUF7q39.png" alt="image-20210407210822757"></p>
 </li>
 </ol>
 <p>图10：用户名输入框<br>2. 当按下欢迎界面的确定按钮时，对文本框内文字进行处理。因此在“确定”按钮的响应函数内，首先检测文本框内是否有内容，然后将用户名转存至新建的游戏界面类成员内，之后使用EndDialog函数与DoModal函数打开游戏界面，关闭欢迎界面；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210830670.png" alt="image-20210407210830670"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/FBbh6yDtjgcsAlK.png" alt="image-20210407210830670"></p>
 <p>图11：确定按键响应函数</p>
 <h4 id="3-4-定时器模块设计"><a href="#3-4-定时器模块设计" class="headerlink" title="3.4 定时器模块设计"></a>3.4 定时器模块设计</h4><ol>
 <li><p>首先使用类向导，为游戏程序添加WM_TIMER消息映射，并生成OnTimer处理函数；</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210907203.png" alt="image-20210407210907203"></p>
+<p><img src="https://i.loli.net/2021/04/08/K5fcOdrHISEeQTg.png" alt="image-20210407210907203"></p>
 </li>
 </ol>
 <p>图12：类向导界面<br>2. 在初始化函数OnInitDialog中配置两个定时器的编号和定时间隔；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210917559.png" alt="image-20210407210917559"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/D6aNOpZs8MJIdBr.png" alt="image-20210407210917559"></p>
 <p>图13：配置定时器代码<br>3. 在生成的OnTimer处理函数中，添加倒计时.显示当前时间以及名人名言滚动显示的代码。通过对nIDEvent变量的判断，为不同的功能选择不同的时间频率；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210927767.png" alt="image-20210407210927767"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/yLuaFQmVhbZHe7z.png" alt="image-20210407210927767"></p>
 <p>图14：OnTimer函数部分代码</p>
 <h4 id="3-4-操作模块设计"><a href="#3-4-操作模块设计" class="headerlink" title="3.4 操作模块设计"></a>3.4 操作模块设计</h4><ol>
 <li><p>在游戏中玩家可通过键盘或鼠标点击按钮来操作游戏；</p>
 </li>
 <li><p>键盘操作：通过重载虚函数PreTranslateMessage()对键盘上下左右键进行截取与响应；</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407210955093.png" alt="image-20210407210955093"></p>
+<p><img src="https://i.loli.net/2021/04/08/KAzHDWfFB8nmJMi.png" alt="image-20210407210955093"></p>
 </li>
 </ol>
 <p>图15：PreTranslateMessage函数的部分代码<br>3. 鼠标操作：在“资源视图”打开游戏界面对话框，添加四个按钮，表示上下左右，并放置在合适位置，之后在其响应函数中写入相应程序；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211002388.png" alt="image-20210407211002388"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/KAzHDWfFB8nmJMi.png" alt="image-20210407211002388"></p>
 <p>图16：“↑”按钮响应函数</p>
-<h4 id="3-5计算模块设计"><a href="#3-5计算模块设计" class="headerlink" title="3.5计算模块设计"></a>3.5计算模块设计</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211013036.png" alt="image-20210407211013036"></p>
+<h4 id="3-5计算模块设计"><a href="#3-5计算模块设计" class="headerlink" title="3.5计算模块设计"></a>3.5计算模块设计</h4><p><img src="https://i.loli.net/2021/04/08/EpFkoZiGXCjy9aw.png" alt="image-20210407211013036"></p>
 <ol>
 <li><p>累加函数</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211057117.png" alt="image-20210407211057117"></p>
+<p><img src="https://i.loli.net/2021/04/08/C5wxSceakURqQhT.png" alt="image-20210407211057117"></p>
 </li>
 </ol>
 <p>图17：累加函数部分代码<br>2. 处理游戏结束：横轴.纵轴分别判断游戏是否能够继续进行。供其它操作函数调用；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211106277.png" alt="image-20210407211106277"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/JRz4xsQOdaqC3ne.png" alt="image-20210407211106277"></p>
 <p>图18：处理游戏结束函数部分代码<br>3. 上下左右计算：调用累加函数，循环输出后检测变动，判断此方向能否继续移动。若不能，则将对应按钮置灰。</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211114589.png" alt="image-20210407211114589"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/VKEBlRIca8zC4At.png" alt="image-20210407211114589"></p>
 <p>图19：向上计算函数部分代码    </p>
 <h4 id="3-6界面重置模块设计"><a href="#3-6界面重置模块设计" class="headerlink" title="3.6界面重置模块设计"></a>3.6界面重置模块设计</h4><p>被调用时，将界面清零，并随机生成数值，输出到游戏面盘。之后将游戏结束的信息记录在相应的数据文件内。</p>
-<p>  <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211236989.png" alt="image-20210407211236989">                             </p>
+<p>  <img src="https://i.loli.net/2021/04/08/z2DN1xPLCyucOn9.png" alt="image-20210407211236989">                             </p>
 <p>图20：重置函数部分代码</p>
 <h4 id="3-7文件写入模块设计"><a href="#3-7文件写入模块设计" class="headerlink" title="3.7文件写入模块设计"></a>3.7文件写入模块设计</h4><ol>
 <li><p>使用CStdioFile标准库函数进行文件读写操作，供其它操作函数调用；</p>
 </li>
 <li><p>文件读取部分未集成未模块，相应代码在之后的排行榜及观看模块中均有体现；</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211302714.png" alt="image-20210407211302714"></p>
+<p><img src="https://i.loli.net/2021/04/08/UZDxWSIbyfp9JQ3.png" alt="image-20210407211302714"></p>
 </li>
 </ol>
 <p>图21：文件写入函数</p>
 <h4 id="3-8排行榜模块设计"><a href="#3-8排行榜模块设计" class="headerlink" title="3.8排行榜模块设计"></a>3.8排行榜模块设计</h4><ol>
 <li><p>创建用户类：其中MAX为用户得分，order为用户在数据文件中所处的位置；</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211327374.png" alt="image-20210407211327374"></p>
+<p><img src="https://i.loli.net/2021/04/08/FdvGpPXzEwBJLyo.png" alt="image-20210407211327374"></p>
 </li>
 </ol>
 <p>图22：用户类<br>2. 使用ReadString函数读取文件，用读取到的信息对用户类对象赋值，使用CArray标准库实现追加；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211333706.png" alt="image-20210407211333706"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/opBqLC8A3D5vIfz.png" alt="image-20210407211333706"></p>
 <p>图23：读取和追加部分代码<br>3. 使用交换排序算法对CArray类对象进行排序，并以一定格式输出到文本框控件；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211342524.png" alt="image-20210407211342524"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/FyaLfvUZEhSTKdB.png" alt="image-20210407211342524"></p>
 <p>图24：排序与输出功能代码</p>
 <h4 id="3-9观看模块设计"><a href="#3-9观看模块设计" class="headerlink" title="3.9观看模块设计"></a>3.9观看模块设计</h4><ol>
 <li><p>在“资源视图”，放置下拉文本框控件在游戏界面，并添加“观看”按钮；</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211419417.png" alt="image-20210407211419417"></p>
+<p><img src="https://i.loli.net/2021/04/08/8EWoucszJD1ZvGq.png" alt="image-20210407211419417"></p>
 </li>
 </ol>
 <p>图25：观看功能相关控件<br>2. 当玩家按下“观看”按钮时，其响应函数被调用，将布尔型全局变量wop变为FALSE，开启“观看模式”。此时，倒计时停止，玩家操作鼠标或键盘将无效。同时，调用DoModal函数，弹出播放速度选择对话框；</p>
-<p>   <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211427250.png" alt="image-20210407211427250"></p>
+<p>   <img src="https://i.loli.net/2021/04/08/PQFDMitOLH6NxuG.png" alt="image-20210407211427250"></p>
 <p>图26：“观看”按钮响应函数部分代码</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211433715.png" alt="image-20210407211433715"></p>
+<p><img src="https://i.loli.net/2021/04/08/rNUjkeoIB4tEDVh.png" alt="image-20210407211433715"></p>
 <p>图27：播放速度选择界面<br>3.    根据用户在文本框内所选的玩家信息，在操作数据文件中根据玩家的order成员变量寻找该玩家，找到后将记录的操作信息依次输出至游戏面盘。<br>4.    输出结束后，将变量wop变为TRUE，关闭“观看模式”，玩家继续游戏。</p>
 <h4 id="3-10退出登录模块设计"><a href="#3-10退出登录模块设计" class="headerlink" title="3.10退出登录模块设计"></a>3.10退出登录模块设计</h4><p>用户点击“退出登陆”按钮时，调用EndDialog函数，关闭游戏界面。之后调用DoModal函数，生成新的欢迎界面。</p>
-<h3 id="4-运行结果与分析"><a href="#4-运行结果与分析" class="headerlink" title="4.运行结果与分析"></a>4.运行结果与分析</h3><h4 id="4-1-用户登录功能"><a href="#4-1-用户登录功能" class="headerlink" title="4.1 用户登录功能"></a>4.1 用户登录功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211514579.png" alt="image-20210407211514579"></p>
+<h3 id="4-运行结果与分析"><a href="#4-运行结果与分析" class="headerlink" title="4.运行结果与分析"></a>4.运行结果与分析</h3><h4 id="4-1-用户登录功能"><a href="#4-1-用户登录功能" class="headerlink" title="4.1 用户登录功能"></a>4.1 用户登录功能</h4><p><img src="https://i.loli.net/2021/04/08/VfGsPLeHUmOinrX.png" alt="image-20210407211514579"></p>
 <p>图28：用户登录界面</p>
-<h4 id="4-2-基础功能（游戏功能）"><a href="#4-2-基础功能（游戏功能）" class="headerlink" title="4.2 基础功能（游戏功能）"></a>4.2 基础功能（游戏功能）</h4><p>​                               <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211538492.png" alt="image-20210407211538492"></p>
+<h4 id="4-2-基础功能（游戏功能）"><a href="#4-2-基础功能（游戏功能）" class="headerlink" title="4.2 基础功能（游戏功能）"></a>4.2 基础功能（游戏功能）</h4><p>​                               <img src="https://i.loli.net/2021/04/08/zMm1PgdJ6CpnlKo.png" alt="image-20210407211538492"></p>
 <p>图29：鼠标与键盘操作游戏</p>
-<p> <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211544421.png" alt="image-20210407211544421"></p>
+<p> <img src="https://i.loli.net/2021/04/08/zak6KJI8CEp1Sjw.png" alt="image-20210407211544421"></p>
 <p>图30：当一个方向无法移动时，按钮置灰</p>
-<p> <img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211549984.png" alt="image-20210407211549984"></p>
+<p> <img src="https://i.loli.net/2021/04/08/4GrR8ad5CQEviuf.png" alt="image-20210407211549984"></p>
 <p>图31：当所有方向都无法移动时，游戏结束</p>
-<h4 id="4-3当前时间显示功能"><a href="#4-3当前时间显示功能" class="headerlink" title="4.3当前时间显示功能"></a>4.3当前时间显示功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211612733.png" alt="image-20210407211612733"></p>
+<h4 id="4-3当前时间显示功能"><a href="#4-3当前时间显示功能" class="headerlink" title="4.3当前时间显示功能"></a>4.3当前时间显示功能</h4><p><img src="https://i.loli.net/2021/04/08/vEOWPoUg6lxHGh4.png" alt="image-20210407211612733"></p>
 <p>图32：显示当前日期与时间</p>
-<h4 id="4-4登录信息及实时操作显示功能"><a href="#4-4登录信息及实时操作显示功能" class="headerlink" title="4.4登录信息及实时操作显示功能"></a>4.4登录信息及实时操作显示功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211635812.png" alt="image-20210407211635812"></p>
+<h4 id="4-4登录信息及实时操作显示功能"><a href="#4-4登录信息及实时操作显示功能" class="headerlink" title="4.4登录信息及实时操作显示功能"></a>4.4登录信息及实时操作显示功能</h4><p><img src="https://i.loli.net/2021/04/08/xlwyFGfXI2t9LRa.png" alt="image-20210407211635812"></p>
 <p>图33：显示玩家登录信息及操作</p>
-<h4 id="4-5排行榜功能"><a href="#4-5排行榜功能" class="headerlink" title="4.5排行榜功能"></a>4.5排行榜功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211649803.png" alt="image-20210407211649803"></p>
+<h4 id="4-5排行榜功能"><a href="#4-5排行榜功能" class="headerlink" title="4.5排行榜功能"></a>4.5排行榜功能</h4><p><img src="https://i.loli.net/2021/04/08/Qypb6kBVlgGNwnh.png" alt="image-20210407211649803"></p>
 <p>图34：对所有玩家进行排序（最多显示TOP15）</p>
-<h4 id="4-6观看功能"><a href="#4-6观看功能" class="headerlink" title="4.6观看功能"></a>4.6观看功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211658280.png" alt="image-20210407211658280"></p>
+<h4 id="4-6观看功能"><a href="#4-6观看功能" class="headerlink" title="4.6观看功能"></a>4.6观看功能</h4><p><img src="https://i.loli.net/2021/04/08/jUfS6vYlCDkNAMJ.png" alt="image-20210407211658280"></p>
 <p>图35：下拉文本框与“观看”按键</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211729265.png" alt="image-20210407211729265"></p>
+<p><img src="https://i.loli.net/2021/04/08/qwfRIFWjBQ9Yd6O.png" alt="image-20210407211729265"></p>
 <p>图36：播放速度选择对话框</p>
-<p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211734856.png" alt="image-20210407211734856"></p>
+<p><img src="https://i.loli.net/2021/04/08/ABDxtvT9gkbMz34.png" alt="image-20210407211734856"></p>
 <p>图37：正在观看中</p>
-<h4 id="4-7名人名言显示功能"><a href="#4-7名人名言显示功能" class="headerlink" title="4.7名人名言显示功能"></a>4.7名人名言显示功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211750332.png" alt="image-20210407211750332"></p>
+<h4 id="4-7名人名言显示功能"><a href="#4-7名人名言显示功能" class="headerlink" title="4.7名人名言显示功能"></a>4.7名人名言显示功能</h4><p><img src="https://i.loli.net/2021/04/08/9MBoFQhCJpij7XS.png" alt="image-20210407211750332"></p>
 <p>图38：文本框内滚动显示名人名言</p>
 <h4 id="4-8背景音乐功能"><a href="#4-8背景音乐功能" class="headerlink" title="4.8背景音乐功能"></a>4.8背景音乐功能</h4><p>经测试游戏运行中有背景音乐播放</p>
-<h4 id="4-9退出登录功能"><a href="#4-9退出登录功能" class="headerlink" title="4.9退出登录功能"></a>4.9退出登录功能</h4><p><img src="C:\Users\11817\AppData\Roaming\Typora\typora-user-images\image-20210407211815174.png" alt="image-20210407211815174"></p>
+<h4 id="4-9退出登录功能"><a href="#4-9退出登录功能" class="headerlink" title="4.9退出登录功能"></a>4.9退出登录功能</h4><p><img src="https://i.loli.net/2021/04/08/TGyOLDJHksNSCuM.png" alt="image-20210407211815174"></p>
 <p>图39：点击“退出登录”后返回欢迎界面</p>
 <h2 id="二、问题解决"><a href="#二、问题解决" class="headerlink" title="二、问题解决"></a>二、问题解决</h2><h4 id="（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？"><a href="#（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？" class="headerlink" title="（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？"></a>（1）在程序设计过程中，你是否通过自定义类对某些功能进行了封装？这些类主要的功能是什么？</h4><p>答：①usr类：表示一个用户的类。成员变量：name——用户名；MAX——得分；order——用户信息在数据文件中的位置。<br>②RandonNum成员函数：无形参，无返回值。随机生成数字2或4，并将其放在游戏面盘的随机位置。<br>③CalcEnd成员函数：无形参，返回BOOL型。判断横轴与纵轴能否继续移动。若能移动，则继续游戏；否则，游戏结束。<br>④reALLBUTTON成员函数：无形参，无返回值。重置四个方向按钮。<br>⑤WriteTXT成员函数：形参CString型，无返回值。向指定文件写入字符串。<br>⑥TravelArrey成员函数：无形参，返回CString型。遍历游戏面盘，并将数据以CString类型返回。<br>⑦TOPList成员函数：无形参，无返回值。将排行榜功能所需的遍历.排序以及输出集成在此函数中。<br>⑧watch成员函数：形参int型，无返回值。完成观看功能，包括查找.遍历.文件读取以及输出。</p>
 <h4 id="（2）小结上机各个环节所出现的错误及解决的办法。"><a href="#（2）小结上机各个环节所出现的错误及解决的办法。" class="headerlink" title="（2）小结上机各个环节所出现的错误及解决的办法。"></a>（2）小结上机各个环节所出现的错误及解决的办法。</h4><p>答：<br><strong>错误一</strong>：定时器相关函数不被执行。<br>解决方法：通过手动输入的配置定时器的代码，即使内容一致，也无法运行。应该通过类向导，加入定时器的消息映射WM_TIMER，程序在执行定时器相关函数。<br><strong>错误二</strong>：调用CString类的Format函数时，报错“没有与参数列表匹配的重载函数”。<br>解决方法：Format函数的形参之一为LPCWSTR类型变量，与字符串的char类型不相符。因此将需要格式化的字符串通过_T函数转换。<br><strong>错误三</strong>：点击“观看”按钮后，本应弹出选择播放速度对话框，但实际情况为界面卡死，无法操作。<br>解决方法：在资源视图中打开要弹出的对话框，将属性中的Visable选项更改为TRUE即可。</p>
