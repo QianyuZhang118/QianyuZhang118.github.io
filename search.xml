@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Labview无法识别.wav格式问题</title>
+      <link href="2021/04/18/sound-analyze-1/"/>
+      <url>2021/04/18/sound-analyze-1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="LabView2015版本读取-wav格式错误的问题-Hex-0x12CA"><a href="#LabView2015版本读取-wav格式错误的问题-Hex-0x12CA" class="headerlink" title="LabView2015版本读取.wav格式错误的问题(Hex 0x12CA)"></a>LabView2015版本读取.wav格式错误的问题(Hex 0x12CA)</h1><p>近日的labview实验中，涉及到了利用Labview和电脑声卡采集声音信息并进行频谱分析的内容。采集声音当然是用Labview自带的音频输入VI，存储音频文件则用的是写入声音文件VI。几番测试下来，采集音频并存储这一功能实现。接下来便是对声音进行分析。</p><p>起初我直接把采集到的音频信号一分为二，一路用作存储，一路用作分析。设计出来之后，发现这样设计只能对实时的信号进行分析，没有办法将分析结果储存下来（可能有VI能够存储结果，容我再学习学习）。总之，这样的分析是非常粗略的。就拿功率谱分析来讲，实验过程中，由于输入的是非周期信号功率谱的曲线随时间一直在无规律变化，很难对某一时刻的结果进行分析。其它亦是如此。</p><p>我便想到先把音频文件储存起来，之后设置一个开关，按下后停止采集信号并开始分析信号。然后问题就来了：</p><p>音频文件路径句柄接入到读取文件VI对应端口后，运行结果如下图：</p><p><img src="https://i.loli.net/2021/04/18/R1yWzvsY9uCaLQO.png" alt="image-20210418234454229"></p><p>之后我查了很多帖子，发现不少人遇到过这种问题，但没有一种明确的解决办法。所以我想会不会是我的.wav文件有问题，便随便找了一首歌，在线转成了.wav格式，接入VI，运行，竟然没有报错。（Ps:《安和桥》真好听——）</p><p>到写这篇文章之时还是没有弄清楚什么原因，有人猜测是编码不一样，也有人说换个新版本的Labview就好了，改天问下老师没准就解决了（这个问题又耗费了我一晚上~）。</p><p><img src="https://i.loli.net/2021/04/18/mIukhgZYxJToED2.png" alt="image-20210418235127939"></p><p>（这是我的框图，先贴在这里吧）</p><p>———————————————————————————————————</p><p>不过，这是我第一次用Labview做这种比较复杂的VI。深深感觉到Labview的强大，而且由于是图形化操作，逻辑相对清楚一些，而同样是NI的LabWindows/CVI由于是基于C的编程，所以入门相对难一些。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> LabView </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LabView </tag>
+            
+            <tag> DSP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VHDL交通灯控制</title>
       <link href="2021/04/08/traffic-vhdl/"/>
       <url>2021/04/08/traffic-vhdl/</url>
